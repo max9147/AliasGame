@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 689194923}
+      - m_Target: {fileID: 689194924}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: LaunchGame
         m_Mode: 1
@@ -2855,6 +2855,7 @@ GameObject:
   m_Component:
   - component: {fileID: 689194921}
   - component: {fileID: 689194922}
+  - component: {fileID: 689194924}
   - component: {fileID: 689194923}
   m_Layer: 0
   m_Name: MenuSystem
@@ -2895,6 +2896,19 @@ MonoBehaviour:
   - {fileID: 500706338}
   - {fileID: 1143921779}
 --- !u!114 &689194923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689194920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51acd691e9e9c7f459395b9c0ca82abe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ScreenOrientation: 1
+--- !u!114 &689194924
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3497,7 +3511,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 689194923}
+      - m_Target: {fileID: 689194924}
         m_TargetAssemblyTypeName: StartGame, Assembly-CSharp
         m_MethodName: LaunchGame
         m_Mode: 1
