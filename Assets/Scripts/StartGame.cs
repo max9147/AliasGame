@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    private List<Themes> selectedThemes = new List<Themes>();
+    public List<Themes> selectedThemes = new List<Themes>();
+
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     public void LaunchGame()
     {
-        foreach (var item in selectedThemes)
-        {
-            Debug.Log(item.themeName);
-        }
         SceneManager.LoadScene(1);
     }
 
