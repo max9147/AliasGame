@@ -20,12 +20,16 @@ public class InitializeThemes : MonoBehaviour
         {
             curButton = Instantiate(themeButtonPrefab, freeContainer.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
+            curButton.GetComponent<ThemeSelection>().theme = item;
+            curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
         }
         freeContainer.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(freeThemes.Length / 4f) * 245);
         foreach (var item in paidThemes)
         {
             curButton = Instantiate(themeButtonPrefab, paidContainer.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
+            curButton.GetComponent<ThemeSelection>().theme = item;
+            curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
         }
         paidContainer.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(paidThemes.Length / 4f) * 245);
 
