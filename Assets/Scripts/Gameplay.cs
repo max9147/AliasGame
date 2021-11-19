@@ -7,6 +7,7 @@ public class Gameplay : MonoBehaviour
 {
     public TextMeshProUGUI displayWord;
     public List<string> availableWords;
+    public List<string> availableWordsBackup;
     public List<Themes> availableThemes;
 
     private string curWord;
@@ -21,6 +22,7 @@ public class Gameplay : MonoBehaviour
                 availableWords.Add(availableThemes[i].words[j]);
             }
         }
+        availableWordsBackup = new List<string>(availableWords);
         ChangeWord();
     }
 
@@ -28,5 +30,10 @@ public class Gameplay : MonoBehaviour
     {
         curWord = availableWords[Random.Range(0, availableWords.Count)];
         displayWord.GetComponent<TextMeshProUGUI>().text = curWord;
+        availableWords.Remove(curWord);
+        if (availableWords.Count == 0)
+        {
+            availableWords = new List<string>(availableWordsBackup);
+        }
     }
 }
