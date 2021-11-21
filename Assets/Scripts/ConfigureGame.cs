@@ -13,7 +13,11 @@ public class ConfigureGame : MonoBehaviour
 
     private int roundCount;
     private int roundLength;
-
+    private void Start()
+    {
+        roundLength = (int)roundLengthSlider.value * 60;
+        GetComponent<StartGame>().SetRoundLength(roundLength);
+    }
     public void ChangeRoundCount()
     {
         roundCount = (int)roundCountSlider.value;
@@ -23,8 +27,8 @@ public class ConfigureGame : MonoBehaviour
 
     public void ChangeRoundLength()
     {
-        roundLength = (int)roundLengthSlider.value * 30;
-        roundLengthText.text = roundLength.ToString();
+        roundLength = (int)roundLengthSlider.value * 60;
+        roundLengthText.text = (roundLength/60).ToString() + " мин ";
         GetComponent<StartGame>().SetRoundLength(roundLength);
     }
 }

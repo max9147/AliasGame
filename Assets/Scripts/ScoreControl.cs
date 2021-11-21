@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class ScoreControl : MonoBehaviour
 {
-    private int scoreDuel;
+    public int scoreDuel;
     private int countTeam;
     int[] scoreTeam;
+
 
     private void Start()
     {
@@ -17,6 +18,11 @@ public class ScoreControl : MonoBehaviour
     public void AddScoreDuel()
     {
         scoreDuel++;
+
+    }
+    public int GetScore()
+    {
+        return scoreDuel;
     }
 
     public void AddScoreTeam(int idTeam)

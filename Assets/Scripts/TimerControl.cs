@@ -1,34 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TimerControl : MonoBehaviour
 {
-    public float TimerLength;
+    public float TimerLength = 10f;
     public GameObject FinishScreen;
-    public bool isTimer;
+    public bool isGoingGame = false;
+    public Text textTimer;
+    public TextMeshProUGUI CorrectWordsCount;
+    public TextMeshProUGUI WrongWordsCount;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        TimerCount();
-    }
+
     public void TimerCount()
     {
         TimerLength = GetComponent<StartGame>().GetRoundLength();
-        isTimer = true;
+        isGoingGame = true;
     }
-    // Update is called once per frame
+   public void TotalScore(int score)
+    {
+        CorrectWordsCount.text = score.ToString() + " ochkoff ";
+    }
     void Update()
     {
-        if (isTimer)
+        if (isGoingGame)
         {
              TimerLength -= Time.deltaTime;
+             textTimer.text = TimerLength.ToString("F2");
         }
         if (TimerLength <= 0)
         {
             FinishScreen.SetActive(true);
-            isTimer = false;
+            TotalScore(GetComponent<ScoreControl>().GetScore());
+            isGoingGame = false;
         }
     }
 

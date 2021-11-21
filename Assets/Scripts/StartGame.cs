@@ -16,6 +16,7 @@ public class StartGame : MonoBehaviour
     {
         gameplay.SetActive(true);
         GetComponent<Gameplay>().StartGame();
+        GetComponent<TimerControl>().TimerCount();
     }
 
     public void AddSelectedTheme(Themes theme)
