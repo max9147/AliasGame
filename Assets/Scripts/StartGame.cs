@@ -5,20 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public List<Themes> selectedThemes = new List<Themes>();
+    public GameObject gameplay;
 
-    public int playerCount;
+    private List<Themes> selectedThemes = new List<Themes>();
+    private int teamCount;
     private int roundCount;
-    public int roundLength;
-
-    private void Start()
-    {
-        DontDestroyOnLoad(this.gameObject);
-    }
+    private int roundLength;
 
     public void LaunchGame()
     {
-        SceneManager.LoadScene(1);
+        gameplay.SetActive(true);
+        GetComponent<Gameplay>().StartGame();
     }
 
     public void AddSelectedTheme(Themes theme)
@@ -31,18 +28,38 @@ public class StartGame : MonoBehaviour
         selectedThemes.Remove(theme);
     }
 
-    public void SetPlayerCount(int count)
+    public List<Themes> GetSelectedThemes()
     {
-        playerCount = count;
+        return selectedThemes;
+    }
+
+    public void SetTeamCount(int count)
+    {
+        teamCount = count;
+    }
+
+    public int GetTeamCount()
+    {
+        return teamCount;
     }
 
     public void SetRoundCount(int count)
     {
         roundCount = count;
     }
+
+    public int GetRoundCount()
+    {
+        return roundCount;
+    }
     
     public void SetRoundLength(int length)
     {
         roundLength = length;
+    }
+
+    public int GetRoundLength()
+    {
+        return roundLength;
     }
 }
