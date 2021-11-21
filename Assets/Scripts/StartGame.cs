@@ -7,9 +7,9 @@ public class StartGame : MonoBehaviour
 {
     public List<Themes> selectedThemes = new List<Themes>();
 
-    private int playerCount;
+    public int playerCount;
     private int roundCount;
-    private int roundLength;
+    public int roundLength;
 
     private void Start()
     {
