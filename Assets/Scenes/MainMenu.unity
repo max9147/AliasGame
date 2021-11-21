@@ -2897,6 +2897,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4a25680f79d7b340818edaf8630e1f1, type: 2}
   paidThemes:
   - {fileID: 11400000, guid: 9df834e8a1d9abc46a8a53b7390cbe42, type: 2}
+  - {fileID: 11400000, guid: 1377672c8a13f4c4aa92e7fff289e7d2, type: 2}
 --- !u!114 &689194924
 MonoBehaviour:
   m_ObjectHideFlags: 0
