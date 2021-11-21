@@ -12,9 +12,9 @@ public class Gameplay : MonoBehaviour
 
     private string curWord;
 
-    private void Start()
+    public void StartGame()
     {
-        availableThemes = GameObject.Find("MenuSystem").GetComponent<StartGame>().selectedThemes;
+        availableThemes = GetComponent<StartGame>().GetSelectedThemes();
         for (int i = 0; i < availableThemes.Count; i++)
         {
             for (int j = 0; j < availableThemes[i].words.Length; j++)

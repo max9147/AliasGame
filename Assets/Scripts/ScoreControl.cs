@@ -4,29 +4,23 @@ using UnityEngine;
 
 public class ScoreControl : MonoBehaviour
 {
-    private int ScoreDuel;
+    private int scoreDuel;
     private int countTeam;
-    int[] score;
+    int[] scoreTeam;
+
     private void Start()
     {
-        countTeam = GameObject.Find("MenuSystem").GetComponent<StartGame>().playerCount;
-        score = new int[countTeam];
-    }
-    public void ScoreDuel1()
-    {
-        ScoreDuel++;
+        countTeam = GetComponent<StartGame>().GetTeamCount();
+        scoreTeam = new int[countTeam];
     }
 
-    public void ScoreTeam(int idTeam)
+    public void AddScoreDuel()
     {
-        score[idTeam]++;
+        scoreDuel++;
+    }
+
+    public void AddScoreTeam(int idTeam)
+    {
+        scoreTeam[idTeam]++;
     }
 }
-
-
-
-
-
-
-   
-

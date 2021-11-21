@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimerControl : MonoBehaviour
 {
-    public float TimerLenght;
+    public float TimerLength;
     public GameObject FinishScreen;
     public bool isTimer;
 
@@ -15,7 +15,7 @@ public class TimerControl : MonoBehaviour
     }
     public void TimerCount()
     {
-        TimerLenght = GetComponent<StartGame>().roundLength;
+        TimerLength = GetComponent<StartGame>().GetRoundLength();
         isTimer = true;
     }
     // Update is called once per frame
@@ -23,9 +23,9 @@ public class TimerControl : MonoBehaviour
     {
         if (isTimer)
         {
-             TimerLenght -= Time.deltaTime;
+             TimerLength -= Time.deltaTime;
         }
-        if (TimerLenght <= 0)
+        if (TimerLength <= 0)
         {
             FinishScreen.SetActive(true);
             isTimer = false;
