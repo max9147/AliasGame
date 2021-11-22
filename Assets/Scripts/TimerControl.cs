@@ -9,8 +9,10 @@ public class TimerControl : MonoBehaviour
     public float TimerLength = 10f;
     public GameObject FinishScreen;
     public bool isGoingGame = false;
+    
     public Text textTimer;
     public TextMeshProUGUI CorrectWordsCount;
+    public TextMeshProUGUI WordWordsCount;
     public TextMeshProUGUI WrongWordsCount;
     public TextMeshProUGUI CorrectWords;
     public TextMeshProUGUI WrongWords;
@@ -24,16 +26,17 @@ public class TimerControl : MonoBehaviour
     public void TotalScore(int score)
     {
         CorrectWordsCount.text = score.ToString() + " ochkoff ";
-        for (int i = 0; i < GetComponent<GameControls>().correctWords.Count; i++)
-        {
-            CorrectWords.text += GetComponent<GameControls>().correctWords[i].ToString() + "\n";
+        WrongWordsCount.text = GetComponent<GameControls>().wrongWords.Count + " ochkoff ";
 
-        }
-        for (int i = 0; i < GetComponent<GameControls>().wrongWords.Count; i++)
+        foreach (var item in GetComponent<GameControls>().correctWords)
         {
-            WrongWords.text += GetComponent<GameControls>().wrongWords[i].ToString() + "\n";
+            CorrectWords.text += item + "\n";
         }
-       
+
+        foreach (var item in GetComponent<GameControls>().wrongWords)
+        {
+            WrongWords.text += item + "\n";
+        }
     }
 
     void Update()
@@ -42,13 +45,14 @@ public class TimerControl : MonoBehaviour
         {
             TimerLength -= Time.deltaTime;
             textTimer.text = TimerLength.ToString("F2");
-        }
-        if (TimerLength <= 0)
-        {
-            TotalScore(GetComponent<ScoreControl>().GetScore());
-            isGoingGame = false;
 
-            FinishScreen.SetActive(true);
+            if (TimerLength <= 0)
+            {
+                TotalScore(GetComponent<ScoreControl>().GetScore());
+                isGoingGame = false;
+
+                FinishScreen.SetActive(true);
+            }
         }
     }
 }
