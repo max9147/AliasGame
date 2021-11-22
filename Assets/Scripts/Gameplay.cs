@@ -36,4 +36,9 @@ public class Gameplay : MonoBehaviour
             availableWords = new List<string>(availableWordsBackup);
         }
     }
+
+    public string GetWord()
+    {
+        return curWord;
+    }
 }

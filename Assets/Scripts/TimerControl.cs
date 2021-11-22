@@ -13,22 +13,23 @@ public class TimerControl : MonoBehaviour
     public TextMeshProUGUI CorrectWordsCount;
     public TextMeshProUGUI WrongWordsCount;
 
-
     public void TimerCount()
     {
         TimerLength = GetComponent<StartGame>().GetRoundLength();
         isGoingGame = true;
     }
-   public void TotalScore(int score)
+
+    public void TotalScore(int score)
     {
         CorrectWordsCount.text = score.ToString() + " ochkoff ";
     }
+
     void Update()
     {
         if (isGoingGame)
         {
-             TimerLength -= Time.deltaTime;
-             textTimer.text = TimerLength.ToString("F2");
+            TimerLength -= Time.deltaTime;
+            textTimer.text = TimerLength.ToString("F2");
         }
         if (TimerLength <= 0)
         {
@@ -37,5 +38,4 @@ public class TimerControl : MonoBehaviour
             isGoingGame = false;
         }
     }
-
 }

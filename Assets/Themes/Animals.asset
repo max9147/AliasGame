@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aa36a8886bd6641ac9fdc708bf3839, type: 3}
   m_Name: Animals
   m_EditorClassIdentifier: 
-  themeName: Animals
+  themeName: "\u0416\u0438\u0432\u043E\u0442\u043D\u044B\u0435"
   themeImage: {fileID: 0}
   words:
   - "\u0410\u0438\u0441\u0442"

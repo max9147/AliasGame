@@ -8,7 +8,6 @@ public class ScoreControl : MonoBehaviour
     private int countTeam;
     int[] scoreTeam;
 
-
     private void Start()
     {
         countTeam = GetComponent<StartGame>().GetTeamCount();
@@ -18,8 +17,8 @@ public class ScoreControl : MonoBehaviour
     public void AddScoreDuel()
     {
         scoreDuel++;
-
     }
+
     public int GetScore()
     {
         return scoreDuel;

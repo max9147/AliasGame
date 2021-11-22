@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aa36a8886bd6641ac9fdc708bf3839, type: 3}
   m_Name: Cinema
   m_EditorClassIdentifier: 
-  themeName: Cinema
+  themeName: "\u041A\u0438\u043D\u043E"
   themeImage: {fileID: 0}
   words:
   - "\u041F\u043E\u0431\u0435\u0433 \u0438\u0437 \u0428\u043E\u0443\u0448\u0435\u043D\u043A\u0430"

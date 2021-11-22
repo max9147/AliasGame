@@ -3542,6 +3542,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 432951bcaae60a940955d9c8866f0405, type: 2}
   - {fileID: 11400000, guid: 15d2ce0bf0f30ef43812e9eb89bb615a, type: 2}
   - {fileID: 11400000, guid: c4a25680f79d7b340818edaf8630e1f1, type: 2}
+  - {fileID: 11400000, guid: efb3afd84a60d0f4eaea370bf78a069e, type: 2}
   paidThemes:
   - {fileID: 11400000, guid: 9df834e8a1d9abc46a8a53b7390cbe42, type: 2}
   - {fileID: 11400000, guid: 1377672c8a13f4c4aa92e7fff289e7d2, type: 2}
@@ -3633,6 +3634,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a488c07e3fd6e74e958add83a54b52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  correctWords: []
+  wrongWords: []
 --- !u!1 &712195171
 GameObject:
   m_ObjectHideFlags: 0

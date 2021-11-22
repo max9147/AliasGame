@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aa36a8886bd6641ac9fdc708bf3839, type: 3}
   m_Name: GenshinImpact
   m_EditorClassIdentifier: 
-  themeName: GenshinImpact
+  themeName: "\u0413\u0435\u043D\u0448\u0438\u043D \u0418\u043C\u043F\u0430\u043A\u0442"
   themeImage: {fileID: 0}
   words:
   - "\u0401\u0438\u043C\u0438\u044F"

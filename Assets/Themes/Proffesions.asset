@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24aa36a8886bd6641ac9fdc708bf3839, type: 3}
   m_Name: Proffesions
   m_EditorClassIdentifier: 
-  themeName: Profession
+  themeName: "\u041F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u0438"
   themeImage: {fileID: 0}
   words:
   - "\u0412\u043E\u0435\u043D\u043D\u043E\u0441\u043B\u0443\u0436\u0430\u0449\u0438\u0439"
