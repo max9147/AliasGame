@@ -10,9 +10,9 @@ public class TimerControl : MonoBehaviour
     public GameObject FinishScreen;
     public bool isGoingGame = false;
     
-    public Text textTimer;
+    public TextMeshProUGUI textTimer;
     public TextMeshProUGUI CorrectWordsCount;
-    public TextMeshProUGUI WordWordsCount;
+   
     public TextMeshProUGUI WrongWordsCount;
     public TextMeshProUGUI CorrectWords;
     public TextMeshProUGUI WrongWords;
