@@ -6,29 +6,57 @@ using UnityEngine.UI;
 
 public class ConfigureGame : MonoBehaviour
 {
-    public Slider roundCountSlider;
-    public TextMeshProUGUI roundCountText;
-    public Slider roundLengthSlider;
-    public TextMeshProUGUI roundLengthText;
+    public Slider roundCountSliderDuel;
+    public Slider roundCountSliderTeam;
+    public TextMeshProUGUI roundCountTextDuel;
+    public TextMeshProUGUI roundCountTextTeam;
+    public Slider roundLengthSliderDuel;
+    public Slider roundLengthSliderTeam;
+    public TextMeshProUGUI roundLengthTextDuel;
+    public TextMeshProUGUI roundLengthTextTeam;
 
     private int roundCount;
     private int roundLength;
+
     private void Start()
     {
-        roundLength = (int)roundLengthSlider.value * 60;
+        roundCount = (int)roundCountSliderDuel.value;
+        GetComponent<StartGame>().SetRoundCount(roundCount);
+        roundLength = (int)roundLengthSliderDuel.value * 60;
         GetComponent<StartGame>().SetRoundLength(roundLength);
     }
-    public void ChangeRoundCount()
+
+    public void ChangeRoundCount(int id)
     {
-        roundCount = (int)roundCountSlider.value;
-        roundCountText.text = roundCount.ToString();
+        if (id == 0)
+        {
+            roundCount = (int)roundCountSliderDuel.value;
+            roundCountSliderTeam.value = roundCount;
+        }
+        else
+        {
+            roundCount = (int)roundCountSliderTeam.value;
+            roundCountSliderDuel.value = roundCount;
+        }
+        roundCountTextDuel.text = roundCount.ToString();
+        roundCountTextTeam.text = roundCount.ToString();
         GetComponent<StartGame>().SetRoundCount(roundCount);
     }
 
-    public void ChangeRoundLength()
+    public void ChangeRoundLength(int id)
     {
-        roundLength = (int)roundLengthSlider.value * 60;
-        roundLengthText.text = (roundLength/60).ToString() + " мин ";
+        if (id == 0)
+        {
+            roundLength = (int)roundLengthSliderDuel.value * 60;
+            roundLengthSliderTeam.value = roundLength / 60;
+        }
+        else
+        {
+            roundLength = (int)roundLengthSliderTeam.value * 60;
+            roundLengthSliderDuel.value = roundLength / 60;
+        }
+        roundLengthTextDuel.text = (roundLength / 60).ToString() + " мин ";
+        roundLengthTextTeam.text = (roundLength / 60).ToString() + " мин ";
         GetComponent<StartGame>().SetRoundLength(roundLength);
     }
 }
