@@ -14,7 +14,7 @@ public class StartGame : MonoBehaviour
 
     public void LaunchGame()
     {
-        gameplay.SetActive(true);
+        GetComponent<MenuNavigation>().OpenMenu(4);
         GetComponent<Gameplay>().StartGame();
         GetComponent<TimerControl>().TimerCount();
     }

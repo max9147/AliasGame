@@ -51,7 +51,7 @@ public class TimerControl : MonoBehaviour
                 TotalScore(GetComponent<ScoreControl>().GetScore());
                 isGoingGame = false;
 
-                FinishScreen.SetActive(true);
+                GetComponent<MenuNavigation>().OpenMenu(5);
             }
         }
     }
