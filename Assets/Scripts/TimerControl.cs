@@ -23,8 +23,8 @@ public class TimerControl : MonoBehaviour
 
     public void TotalScore()
     {
-        correctWordsCount.text = GetComponent<GameControls>().correctWords.Count + " правильных";
-        wrongWordsCount.text = GetComponent<GameControls>().wrongWords.Count + " неправильных";
+        correctWordsCount.text = GetComponent<GameControls>().correctWords.Count + " правильных ";
+        wrongWordsCount.text = GetComponent<GameControls>().wrongWords.Count + " неправильных ";
 
         correctWords.text = "";
         wrongWords.text = "";

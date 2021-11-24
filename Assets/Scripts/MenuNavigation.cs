@@ -24,6 +24,16 @@ public class MenuNavigation : MonoBehaviour
         }
     }
 
+    public void RestartRound()
+    {
+        foreach (var item in menus)
+        {
+            item.SetActive(false);
+        }
+        menus[4].SetActive(true);
+        GetComponent<TimerControl>().TimerCount();
+    }
+
     public void ReturnToMain()
     {
         foreach (var item in menus)
