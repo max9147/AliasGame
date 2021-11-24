@@ -13,9 +13,16 @@ public class ThemeSelection : MonoBehaviour
     {
         if (!isSelected)
         {
-            menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
-            transform.Find("Check").gameObject.SetActive(true);
-            isSelected = true;
+            if (theme.type == themeType.free)
+            {
+                menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
+                transform.Find("Check").gameObject.SetActive(true);
+                isSelected = true;
+            }
+            else
+            {
+
+            }
         }
         else
         {
