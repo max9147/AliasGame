@@ -24,4 +24,14 @@ public class ThemeSelection : MonoBehaviour
             isSelected = false;
         }
     }
+
+    public void DisselectThemes()
+    {
+        if (isSelected)
+        {
+            menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
+            transform.Find("Check").gameObject.SetActive(false);
+            isSelected = false;
+        }
+    }
 }

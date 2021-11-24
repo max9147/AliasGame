@@ -13,6 +13,15 @@ public class MenuNavigation : MonoBehaviour
             item.SetActive(false);
         }
         menus[menuID].SetActive(true);
+
+        if (menuID == 1 || menuID == 2)
+        {
+            GameObject[] themes = GameObject.FindGameObjectsWithTag("Theme");
+            foreach (var item in themes)
+            {
+                item.GetComponent<ThemeSelection>().DisselectThemes();
+            }
+        }
     }
 
     public void ReturnToMain()
@@ -21,6 +30,6 @@ public class MenuNavigation : MonoBehaviour
         {
             item.SetActive(false);
         }
-        menus[0].SetActive(true);
+        menus[0].SetActive(true);        
     }
 }

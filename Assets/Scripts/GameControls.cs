@@ -19,4 +19,10 @@ public class GameControls : MonoBehaviour
         wrongWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
     }
+
+    public void ClearWords()
+    {
+        correctWords.Clear();
+        wrongWords.Clear();
+    }
 }

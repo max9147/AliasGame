@@ -6,49 +6,52 @@ using UnityEngine.UI;
 
 public class TimerControl : MonoBehaviour
 {
-    public float TimerLength = 10f;
-    public GameObject FinishScreen;
-    public bool isGoingGame = false;
+    private float timerLength;
+    private bool isGoingGame = false;
     
     public TextMeshProUGUI textTimer;
-    public TextMeshProUGUI CorrectWordsCount;
-   
-    public TextMeshProUGUI WrongWordsCount;
-    public TextMeshProUGUI CorrectWords;
-    public TextMeshProUGUI WrongWords;
+    public TextMeshProUGUI correctWordsCount;   
+    public TextMeshProUGUI wrongWordsCount;
+    public TextMeshProUGUI correctWords;
+    public TextMeshProUGUI wrongWords;
 
     public void TimerCount()
     {
-        TimerLength = GetComponent<StartGame>().GetRoundLength();
+        timerLength = GetComponent<StartGame>().GetRoundLength();
         isGoingGame = true;
     }
 
-    public void TotalScore(int score)
+    public void TotalScore()
     {
-        CorrectWordsCount.text = score.ToString() + " ochkoff ";
-        WrongWordsCount.text = GetComponent<GameControls>().wrongWords.Count + " ochkoff ";
+        correctWordsCount.text = GetComponent<GameControls>().correctWords.Count + " правильных";
+        wrongWordsCount.text = GetComponent<GameControls>().wrongWords.Count + " неправильных";
+
+        correctWords.text = "";
+        wrongWords.text = "";
 
         foreach (var item in GetComponent<GameControls>().correctWords)
         {
-            CorrectWords.text += item + "\n";
+            correctWords.text += item + "\n";
         }
 
         foreach (var item in GetComponent<GameControls>().wrongWords)
         {
-            WrongWords.text += item + "\n";
+            wrongWords.text += item + "\n";
         }
+
+        GetComponent<GameControls>().ClearWords();
     }
 
     void Update()
     {
         if (isGoingGame)
         {
-            TimerLength -= Time.deltaTime;
-            textTimer.text = TimerLength.ToString("F2");
+            timerLength -= Time.deltaTime;
+            textTimer.text = timerLength.ToString("F2");
 
-            if (TimerLength <= 0)
+            if (timerLength <= 0)
             {
-                TotalScore(GetComponent<ScoreControl>().GetScore());
+                TotalScore();
                 isGoingGame = false;
 
                 GetComponent<MenuNavigation>().OpenMenu(5);
