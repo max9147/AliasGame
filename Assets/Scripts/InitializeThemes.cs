@@ -22,14 +22,14 @@ public class InitializeThemes : MonoBehaviour
 
     private void Start()
     {
-        foreach (var item in freeThemes)
+        foreach (var item in freeThemes) // Проход по всем бесплатным темам
         {
-            curButton = Instantiate(themeButtonPrefab, freeContainerDuel.transform);
-            curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
-            curButton.GetComponent<ThemeSelection>().theme = item;
-            curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
+            curButton = Instantiate(themeButtonPrefab, freeContainerDuel.transform); // Создаем кнопку из префаба
+            curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName; // Находим на кнопке текст и меняем его на название текущей рассматриваемой темы
+            curButton.GetComponent<ThemeSelection>().theme = item; // Присваеваем переменной theme из скрипта на создаваемой кнопке нужную тему
+            curButton.GetComponent<ThemeSelection>().menuSystem = gameObject; // А в переменной menuSystem присваеваем объект на котором находится ЭТОТ скрипт (InitializeThemes)
 
-            curButton = Instantiate(themeButtonPrefab, freeContainerTeam.transform);
+            curButton = Instantiate(themeButtonPrefab, freeContainerTeam.transform); // Тут то же но для командного меню
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;

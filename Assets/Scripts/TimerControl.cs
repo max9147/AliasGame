@@ -53,8 +53,8 @@ public class TimerControl : MonoBehaviour
             {
                 TotalScore();
                 isGoingGame = false;
-
                 GetComponent<MenuNavigation>().OpenMenu(5);
+                GetComponent<PhoneTilt>().isPlaying = false;
             }
         }
     }

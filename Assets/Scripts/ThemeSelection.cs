@@ -18,6 +18,7 @@ public class ThemeSelection : MonoBehaviour
                 menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
                 transform.Find("Check").gameObject.SetActive(true);
                 isSelected = true;
+                menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
             }
             else
             {
@@ -29,6 +30,7 @@ public class ThemeSelection : MonoBehaviour
             menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
             transform.Find("Check").gameObject.SetActive(false);
             isSelected = false;
+            menuSystem.GetComponent<StartGame>().DecreaseSelectedCount();
         }
     }
 
@@ -39,6 +41,7 @@ public class ThemeSelection : MonoBehaviour
             menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
             transform.Find("Check").gameObject.SetActive(false);
             isSelected = false;
+            menuSystem.GetComponent<StartGame>().ResetSelectedCount();
         }
     }
 }
