@@ -8,9 +8,12 @@ public class MenuNavigation : MonoBehaviour
 
     public void OpenMenu(int menuID)
     {
-        foreach (var item in menus)
+        if (menuID != 7)
         {
-            item.SetActive(false);
+            foreach (var item in menus)
+            {
+                item.SetActive(false);
+            }
         }
         menus[menuID].SetActive(true);
 
@@ -22,10 +25,16 @@ public class MenuNavigation : MonoBehaviour
                 item.GetComponent<ThemeSelection>().DisselectThemes();
             }
         }
-        if (menuID == 7)
+
+        if (menuID == 2)
         {
-            menus[1].SetActive(true);
+            GetComponent<TeamSystem>().ResetTeams();
         }
+    }
+
+    public void CloseDescription()
+    {
+        menus[7].SetActive(false);
     }
 
     public void RestartRound()
