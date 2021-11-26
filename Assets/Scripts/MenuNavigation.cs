@@ -22,6 +22,10 @@ public class MenuNavigation : MonoBehaviour
                 item.GetComponent<ThemeSelection>().DisselectThemes();
             }
         }
+        if (menuID == 7)
+        {
+            menus[1].SetActive(true);
+        }
     }
 
     public void RestartRound()

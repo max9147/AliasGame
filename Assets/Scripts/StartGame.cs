@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +16,9 @@ public class StartGame : MonoBehaviour
     private int roundCount;
     private int roundLength;
     private int selectedCount = 0;
+
+    public TextMeshProUGUI nameTheme;
+    public TextMeshProUGUI descriptionTheme;
 
     public void LaunchGame()
     {
@@ -92,4 +96,14 @@ public class StartGame : MonoBehaviour
     {
         return roundLength;
     }
+
+    public void GetDescriptionThemes(string description)
+    {
+        descriptionTheme.text = description;
+    }
+    public void GetNameThemes(string name)
+    {
+        nameTheme.text = name;
+    }
+
 }

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ThemeSelection : MonoBehaviour
 {
     public GameObject menuSystem;
     public Themes theme;
+
+    
 
     private bool isSelected = false;
 
@@ -22,7 +25,10 @@ public class ThemeSelection : MonoBehaviour
             }
             else
             {
-
+                
+                menuSystem.GetComponent<MenuNavigation>().OpenMenu(7);
+                menuSystem.GetComponent<StartGame>().GetDescriptionThemes(theme.description);
+                menuSystem.GetComponent<StartGame>().GetNameThemes(theme.themeName);
             }
         }
         else

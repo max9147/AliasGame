@@ -358,3 +358,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuSystem: {fileID: 0}
   theme: {fileID: 0}
+  nameTheme: {fileID: 0}
+  descriptionTheme: {fileID: 0}
