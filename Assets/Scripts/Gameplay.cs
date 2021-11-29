@@ -12,8 +12,18 @@ public class Gameplay : MonoBehaviour
     public List<Themes> availableThemes;    
     public TextMeshProUGUI displayWord;
 
-    public void StartGame()
+    public string[] NameTeam;
+    public int[] ScoreTeam;
+
+   
+
+    public void StartGame(bool isTeamGame)
     {
+        if (isTeamGame)
+        {
+
+        }
+
         availableThemes = GetComponent<StartGame>().GetSelectedThemes();
         for (int i = 0; i < availableThemes.Count; i++)
         {
@@ -40,5 +50,19 @@ public class Gameplay : MonoBehaviour
     public string GetWord()
     {
         return curWord;
+    }
+
+    public void TeamSetUp()
+    {
+        NameTeam = new string[GetComponent<TeamSystem>().teamCount];
+        ScoreTeam = new int[GetComponent<TeamSystem>().teamCount];
+        int index = 0;
+
+        foreach (var item in GetComponent<TeamSystem>().spawnedTeams)
+        {
+            
+            
+            index++;
+        }
     }
 }

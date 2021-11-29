@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class TeamSystem : MonoBehaviour
 {
-    private int teamCount = 0;
+    public int teamCount = 0;
     private GameObject curTeam;
-    private List<GameObject> spawnedTeams = new List<GameObject>();
+    public List<GameObject> spawnedTeams = new List<GameObject>(); //Брать название отсюда, с листом только форич!!! 
 
     public Button buttonAddTeam;
     public GameObject teamPrefab;
