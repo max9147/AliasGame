@@ -5,12 +5,12 @@ using TMPro;
 
 public class Gameplay : MonoBehaviour
 {
-    public TextMeshProUGUI displayWord;
+    private string curWord;
+
     public List<string> availableWords;
     public List<string> availableWordsBackup;
-    public List<Themes> availableThemes;
-
-    private string curWord;
+    public List<Themes> availableThemes;    
+    public TextMeshProUGUI displayWord;
 
     public void StartGame()
     {

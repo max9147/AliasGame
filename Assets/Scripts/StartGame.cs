@@ -7,16 +7,13 @@ using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour
 {
-    public GameObject gameplay;
-    public Button startDuelButton;
-    public Button startTeamButton;
-
-    private List<Themes> selectedThemes = new List<Themes>();
-    private int teamCount;
-    private int roundCount;
     private int roundLength;
     private int selectedCount = 0;
+    private List<Themes> selectedThemes = new List<Themes>();
 
+    public Button startDuelButton;
+    public Button startTeamButton;
+    public GameObject gameplay;
     public TextMeshProUGUI nameTheme;
     public TextMeshProUGUI descriptionTheme;
 
@@ -66,26 +63,6 @@ public class StartGame : MonoBehaviour
     {
         return selectedThemes;
     }
-
-    public void SetTeamCount(int count)
-    {
-        teamCount = count;
-    }
-
-    public int GetTeamCount()
-    {
-        return teamCount;
-    }
-
-    public void SetRoundCount(int count)
-    {
-        roundCount = count;
-    }
-
-    public int GetRoundCount()
-    {
-        return roundCount;
-    }
     
     public void SetRoundLength(int length)
     {
@@ -101,9 +78,9 @@ public class StartGame : MonoBehaviour
     {
         descriptionTheme.text = description;
     }
+
     public void GetNameThemes(string name)
     {
         nameTheme.text = name;
     }
-
 }

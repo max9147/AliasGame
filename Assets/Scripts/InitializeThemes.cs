@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class InitializeThemes : MonoBehaviour
 {
+    private GameObject curButton;
+
     public GameObject themeButtonPrefab;
     public GameObject mainContainerDuel;
     public GameObject freeContainerDuel;
@@ -17,8 +19,6 @@ public class InitializeThemes : MonoBehaviour
     public Themes[] freeThemes;
     public Themes[] adThemes;
     public Themes[] paidThemes;
-
-    private GameObject curButton;
 
     private void Start()
     {

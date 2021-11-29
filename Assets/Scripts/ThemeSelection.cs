@@ -5,12 +5,10 @@ using UnityEngine;
 
 public class ThemeSelection : MonoBehaviour
 {
+    private bool isSelected = false;
+
     public GameObject menuSystem;
     public Themes theme;
-
-    
-
-    private bool isSelected = false;
 
     public void SelectTheme()
     {

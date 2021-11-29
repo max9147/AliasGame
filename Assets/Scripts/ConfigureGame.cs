@@ -6,29 +6,17 @@ using UnityEngine.UI;
 
 public class ConfigureGame : MonoBehaviour
 {
-    public Slider roundCountSliderTeam;
-    public TextMeshProUGUI roundCountTextTeam;
+    private int roundLength;
+
     public Slider roundLengthSliderDuel;
     public Slider roundLengthSliderTeam;
     public TextMeshProUGUI roundLengthTextDuel;
     public TextMeshProUGUI roundLengthTextTeam;
 
-    private int roundCount;
-    private int roundLength;
-
     private void Start()
     {
-        roundCount = (int)roundCountSliderTeam.value;
-        GetComponent<StartGame>().SetRoundCount(roundCount);
         roundLength = (int)roundLengthSliderDuel.value * 60;
         GetComponent<StartGame>().SetRoundLength(roundLength);
-    }
-
-    public void ChangeRoundCount()
-    {
-        roundCount = (int)roundCountSliderTeam.value;
-        roundCountTextTeam.text = roundCount.ToString();
-        GetComponent<StartGame>().SetRoundCount(roundCount);
     }
 
     public void ChangeRoundLength(int id)

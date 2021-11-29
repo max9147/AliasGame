@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class TimerControl : MonoBehaviour
 {
-    private float timerLength;
     private bool isGoingGame = false;
+    private float timerLength;
     
     public TextMeshProUGUI textTimer;
     public TextMeshProUGUI correctWordsCount;   

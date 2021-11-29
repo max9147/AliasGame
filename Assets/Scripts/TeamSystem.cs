@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class TeamSystem : MonoBehaviour
 {
-    public Button buttonAddTeam;
-    public GameObject teamPrefab;
-    public GameObject teamsContainer;
-
     private int teamCount = 0;
     private GameObject curTeam;
     private List<GameObject> spawnedTeams = new List<GameObject>();
+
+    public Button buttonAddTeam;
+    public GameObject teamPrefab;
+    public GameObject teamsContainer;
 
     public void AddTeam()
     {

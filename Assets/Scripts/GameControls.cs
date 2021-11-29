@@ -5,15 +5,13 @@ using UnityEngine.UI;
 
 public class GameControls : MonoBehaviour
 {
+    private float colorTime = 0;
+
     public Color correctColor;
     public Color wrongColor;
-
     public Image gameplayBG;
-
     public List<string> correctWords;
-    public List<string> wrongWords;
-
-    private float colorTime = 0;
+    public List<string> wrongWords;    
 
     private void FixedUpdate()
     {
@@ -28,9 +26,12 @@ public class GameControls : MonoBehaviour
     {
         correctWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
-        GetComponent<ScoreControl>().AddScoreDuel();
         gameplayBG.color = correctColor;
         colorTime = 1.5f;
+        if (GetComponent<Settings>().GetVibrations())
+        {
+            Handheld.Vibrate();
+        }        
     }
 
     public void WrongAnswer()
@@ -38,7 +39,11 @@ public class GameControls : MonoBehaviour
         wrongWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
         gameplayBG.color = wrongColor;
-        colorTime = 0.5f;
+        colorTime = 1.5f;
+        if (GetComponent<Settings>().GetVibrations())
+        {
+            Handheld.Vibrate();
+        }
     }
 
     public void ClearWords()
