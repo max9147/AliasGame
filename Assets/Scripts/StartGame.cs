@@ -17,10 +17,10 @@ public class StartGame : MonoBehaviour
     public TextMeshProUGUI nameTheme;
     public TextMeshProUGUI descriptionTheme;
 
-    public void LaunchGame()
+    public void LaunchGame(bool isTeamGame)
     {
         GetComponent<MenuNavigation>().OpenMenu(4);
-        GetComponent<Gameplay>().StartGame();
+        GetComponent<Gameplay>().StartGame(isTeamGame);
         GetComponent<TimerControl>().TimerCount();
         GetComponent<PhoneTilt>().isPlaying = true;
     }

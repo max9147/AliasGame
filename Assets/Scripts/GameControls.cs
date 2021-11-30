@@ -11,7 +11,9 @@ public class GameControls : MonoBehaviour
     public Color wrongColor;
     public Image gameplayBG;
     public List<string> correctWords;
-    public List<string> wrongWords;    
+    public List<string> wrongWords;  
+    
+
 
     private void FixedUpdate()
     {
@@ -31,7 +33,11 @@ public class GameControls : MonoBehaviour
         if (GetComponent<Settings>().GetVibrations())
         {
             Handheld.Vibrate();
-        }        
+        }
+        if (GetComponent<Gameplay>().TeamGameSelected)
+        {
+            GetComponent<Gameplay>().AddTeamScore();
+        }
     }
 
     public void WrongAnswer()

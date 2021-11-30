@@ -43,6 +43,11 @@ public class MenuNavigation : MonoBehaviour
         {
             item.SetActive(false);
         }
+        if (GetComponent<Gameplay>().TeamGameSelected)
+        {
+            GetComponent<Gameplay>().SetCurrentTeam();
+
+        }
         menus[4].SetActive(true);
         GetComponent<TimerControl>().TimerCount();
     }

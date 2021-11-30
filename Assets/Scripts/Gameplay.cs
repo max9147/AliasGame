@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Linq;
 
 public class Gameplay : MonoBehaviour
 {
@@ -11,19 +12,30 @@ public class Gameplay : MonoBehaviour
     public List<string> availableWordsBackup;
     public List<Themes> availableThemes;    
     public TextMeshProUGUI displayWord;
+    public TextMeshProUGUI nameTeamText;
+    public TextMeshProUGUI FinishTeamNameText;
+    public TextMeshProUGUI FinishScoreText;
 
     public string[] NameTeam;
     public int[] ScoreTeam;
 
-   
+    public int currentTeam = 0;
+
+    public bool TeamGameSelected;
 
     public void StartGame(bool isTeamGame)
     {
         if (isTeamGame)
         {
-
+            TeamSetUp();
+            SetCurrentTeam();
+            TeamGameSelected = true;
         }
-
+        else
+        {
+            TeamGameSelected = false;
+        }
+        
         availableThemes = GetComponent<StartGame>().GetSelectedThemes();
         for (int i = 0; i < availableThemes.Count; i++)
         {
@@ -60,9 +72,46 @@ public class Gameplay : MonoBehaviour
 
         foreach (var item in GetComponent<TeamSystem>().spawnedTeams)
         {
-            
-            
+            NameTeam[index] = item.transform.Find("TeamName").GetComponent<TMP_InputField>().text;
             index++;
         }
+       
     }
+
+    public void SetCurrentTeam()
+    {
+        if (currentTeam != GetComponent<TeamSystem>().teamCount)
+        {
+            nameTeamText.text = NameTeam[currentTeam];
+            currentTeam++;
+            Debug.Log(nameTeamText.text);
+        }
+        else
+        {
+            FinishTeamGame();
+        }
+
+    }
+
+    public void GetCurrentTeamName()
+    {
+        nameTeamText.text = NameTeam[currentTeam];
+    }
+
+    public void AddTeamScore()
+    {
+        ScoreTeam[currentTeam - 1]++;
+    }
+    
+    public void FinishTeamGame()
+    {
+        GetComponent<MenuNavigation>().OpenMenu(8);
+        for (int i = 0; i < NameTeam.Length; i++)
+        {
+            FinishTeamNameText.text = NameTeam[i] + " \n ";
+            FinishScoreText.text = ScoreTeam[i] + " \n ";
+        }
+        
+    }
+    
 }
