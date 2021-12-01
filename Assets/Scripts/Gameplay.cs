@@ -65,6 +65,14 @@ public class Gameplay : MonoBehaviour
         }
     }
 
+    public void SkipRotation()
+    {
+        GetComponent<TimerControl>().StartTimer();
+        rotateShowing = false;
+        rotateScreen.SetActive(false);
+        GetComponent<PhoneTilt>().isPlaying = true;
+    }
+
     public void ChangeWord()
     {
         curWord = availableWords[Random.Range(0, availableWords.Count)];
