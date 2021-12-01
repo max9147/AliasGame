@@ -110,7 +110,7 @@ public class Gameplay : MonoBehaviour
             nameTeamText.text = NameTeam[currentTeam];
             currentTeam++;
             rotateScreen.SetActive(true);
-            rotateScreenTeamName.text = "Сейчас играет комманда: " + NameTeam[currentTeam];
+            rotateScreenTeamName.text = "Сейчас играет комманда: " + NameTeam[currentTeam - 1];
         }
         else
         {
