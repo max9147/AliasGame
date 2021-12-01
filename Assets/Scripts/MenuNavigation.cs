@@ -49,6 +49,7 @@ public class MenuNavigation : MonoBehaviour
             GetComponent<Gameplay>().SetCurrentTeam();
         }
         GetComponent<TimerControl>().TimerCount();
+        GetComponent<Gameplay>().rotateScreen.SetActive(true);
         GetComponent<Gameplay>().rotateShowing = true;
     }
 

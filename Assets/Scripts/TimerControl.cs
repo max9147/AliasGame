@@ -8,12 +8,14 @@ public class TimerControl : MonoBehaviour
 {
     private bool isGoingGame = false;
     private float timerLength;
-    
+    private GameObject curWord;
+
+    public GameObject wordPrefab;
+    public GameObject correctContainer;
+    public GameObject wrongContainer;
     public TextMeshProUGUI textTimer;
     public TextMeshProUGUI correctWordsCount;   
     public TextMeshProUGUI wrongWordsCount;
-    public TextMeshProUGUI correctWords;
-    public TextMeshProUGUI wrongWords;
 
     public void TimerCount()
     {
@@ -30,17 +32,27 @@ public class TimerControl : MonoBehaviour
         correctWordsCount.text = GetComponent<GameControls>().correctWords.Count + " правильных ";
         wrongWordsCount.text = GetComponent<GameControls>().wrongWords.Count + " неправильных ";
 
-        correctWords.text = "";
-        wrongWords.text = "";
+        foreach (Transform child in correctContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        foreach (Transform child in wrongContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        correctContainer.GetComponent<RectTransform>().sizeDelta = new Vector3(500, GetComponent<GameControls>().correctWords.Count * 160 - 10);
+        wrongContainer.GetComponent<RectTransform>().sizeDelta = new Vector3(500, GetComponent<GameControls>().wrongWords.Count * 160 - 10);
 
         foreach (var item in GetComponent<GameControls>().correctWords)
         {
-            correctWords.text += item + "\n";
+            curWord = Instantiate(wordPrefab, correctContainer.transform);
+            curWord.GetComponent<TextMeshProUGUI>().text = item;
         }
 
         foreach (var item in GetComponent<GameControls>().wrongWords)
         {
-            wrongWords.text += item + "\n";
+            curWord = Instantiate(wordPrefab, wrongContainer.transform);
+            curWord.GetComponent<TextMeshProUGUI>().text = item;
         }
 
         GetComponent<GameControls>().ClearWords();
