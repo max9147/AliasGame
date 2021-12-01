@@ -18,6 +18,10 @@ public class TimerControl : MonoBehaviour
     public void TimerCount()
     {
         timerLength = GetComponent<StartGame>().GetRoundLength();
+    }
+
+    public void StartTimer()
+    {
         isGoingGame = true;
     }
 

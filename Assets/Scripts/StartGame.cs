@@ -21,8 +21,7 @@ public class StartGame : MonoBehaviour
     {
         GetComponent<MenuNavigation>().OpenMenu(4);
         GetComponent<Gameplay>().StartGame(isTeamGame);
-        GetComponent<TimerControl>().TimerCount();
-        GetComponent<PhoneTilt>().isPlaying = true;
+        GetComponent<TimerControl>().TimerCount();        
     }
 
     public void IncreaseSelectedCount()

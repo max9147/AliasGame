@@ -33,12 +33,12 @@ public class PhoneTilt : MonoBehaviour
                     checkTime = 0;
                     if (Input.gyro.attitude.x - curTilt > sensitivity)
                     {
-                        GetComponent<GameControls>().WrongAnswer();
+                        GetComponent<GameControls>().CorrectAnswer();
                         delayTime = 0;
                     }
                     if (Input.gyro.attitude.x - curTilt < -sensitivity)
                     {
-                        GetComponent<GameControls>().CorrectAnswer();
+                        GetComponent<GameControls>().WrongAnswer();
                         delayTime = 0;
                     }                    
                 }                

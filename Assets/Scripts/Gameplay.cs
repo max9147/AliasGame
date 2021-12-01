@@ -8,6 +8,7 @@ public class Gameplay : MonoBehaviour
 {
     private string curWord;
 
+    public GameObject rotateScreen;
     public List<string> availableWords;
     public List<string> availableWordsBackup;
     public List<Themes> availableThemes;    
@@ -15,6 +16,7 @@ public class Gameplay : MonoBehaviour
     public TextMeshProUGUI nameTeamText;
     public TextMeshProUGUI FinishTeamNameText;
     public TextMeshProUGUI FinishScoreText;
+    public TextMeshProUGUI rotateScreenTeamName;
 
     public string[] NameTeam;
     public int[] ScoreTeam;
@@ -22,6 +24,7 @@ public class Gameplay : MonoBehaviour
     public int currentTeam = 0;
 
     public bool TeamGameSelected;
+    public bool rotateShowing = false;
 
     public void StartGame(bool isTeamGame)
     {
@@ -34,6 +37,8 @@ public class Gameplay : MonoBehaviour
         else
         {
             TeamGameSelected = false;
+            rotateScreen.SetActive(true);
+            rotateScreenTeamName.text = "";
         }
         
         availableThemes = GetComponent<StartGame>().GetSelectedThemes();
@@ -46,6 +51,18 @@ public class Gameplay : MonoBehaviour
         }
         availableWordsBackup = new List<string>(availableWords);
         ChangeWord();
+        rotateShowing = true;
+    }
+
+    private void Update()
+    {
+        if (Input.gyro.attitude.x > 0.4f && rotateShowing)
+        {
+            GetComponent<TimerControl>().StartTimer();
+            rotateShowing = false;
+            rotateScreen.SetActive(false);
+            GetComponent<PhoneTilt>().isPlaying = true;
+        }
     }
 
     public void ChangeWord()
@@ -84,7 +101,8 @@ public class Gameplay : MonoBehaviour
         {
             nameTeamText.text = NameTeam[currentTeam];
             currentTeam++;
-            Debug.Log(nameTeamText.text);
+            rotateScreen.SetActive(true);
+            rotateScreenTeamName.text = "Сейчас играет комманда: " + NameTeam[currentTeam];
         }
         else
         {
@@ -110,8 +128,6 @@ public class Gameplay : MonoBehaviour
         {
             FinishTeamNameText.text = NameTeam[i] + " \n ";
             FinishScoreText.text = ScoreTeam[i] + " \n ";
-        }
-        
-    }
-    
+        }        
+    }    
 }
