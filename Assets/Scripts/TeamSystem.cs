@@ -21,6 +21,13 @@ public class TeamSystem : MonoBehaviour
         curTeam.transform.Find("TeamName").GetComponent<TMP_InputField>().text = "Команда " + teamCount.ToString();
         curTeam.GetComponent<SetupTeam>().gameSystems = gameObject;
         spawnedTeams.Add(curTeam);
+        if (teamCount > 2)
+        {
+            foreach (var item in spawnedTeams)
+            {
+                item.transform.Find("DeleteTeam").GetComponent<Button>().interactable = true;
+            }
+        }
         if (teamCount == 6)
         {
             buttonAddTeam.interactable = false;
@@ -43,6 +50,13 @@ public class TeamSystem : MonoBehaviour
     public void RemoveTeam(GameObject team)
     {
         teamCount--;
+        if (teamCount <= 2)
+        {
+            foreach (var item in spawnedTeams)
+            {
+                item.transform.Find("DeleteTeam").GetComponent<Button>().interactable = false;
+            }
+        }
         spawnedTeams.Remove(team);
         Destroy(team);
         buttonAddTeam.interactable = true;

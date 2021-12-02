@@ -7,19 +7,20 @@ using System.Linq;
 public class Gameplay : MonoBehaviour
 {
     private string curWord;
+    private Dictionary<string, int> scores = new Dictionary<string, int>();
 
+    public GameObject teamScorePrefab;
+    public GameObject scoringContainer;
     public GameObject rotateScreen;
     public List<string> availableWords;
     public List<string> availableWordsBackup;
     public List<Themes> availableThemes;    
     public TextMeshProUGUI displayWord;
     public TextMeshProUGUI nameTeamText;
-    public TextMeshProUGUI FinishTeamNameText;
-    public TextMeshProUGUI FinishScoreText;
     public TextMeshProUGUI rotateScreenTeamName;
 
-    public string[] NameTeam;
-    public int[] ScoreTeam;
+    public string[] teamNames;
+    public int[] teamScores;
 
     public int currentTeam = 0;
 
@@ -91,13 +92,13 @@ public class Gameplay : MonoBehaviour
 
     public void TeamSetUp()
     {
-        NameTeam = new string[GetComponent<TeamSystem>().teamCount];
-        ScoreTeam = new int[GetComponent<TeamSystem>().teamCount];
+        teamNames = new string[GetComponent<TeamSystem>().teamCount];
+        teamScores = new int[GetComponent<TeamSystem>().teamCount];
         int index = 0;
 
         foreach (var item in GetComponent<TeamSystem>().spawnedTeams)
         {
-            NameTeam[index] = item.transform.Find("TeamName").GetComponent<TMP_InputField>().text;
+            teamNames[index] = item.transform.Find("TeamName").GetComponent<TMP_InputField>().text;
             index++;
         }
        
@@ -107,10 +108,10 @@ public class Gameplay : MonoBehaviour
     {
         if (currentTeam != GetComponent<TeamSystem>().teamCount)
         {
-            nameTeamText.text = NameTeam[currentTeam];
+            nameTeamText.text = teamNames[currentTeam];
             currentTeam++;
             rotateScreen.SetActive(true);
-            rotateScreenTeamName.text = "Сейчас играет комманда: " + NameTeam[currentTeam - 1];
+            rotateScreenTeamName.text = "Сейчас играет комманда: " + teamNames[currentTeam - 1];
         }
         else
         {
@@ -121,21 +122,27 @@ public class Gameplay : MonoBehaviour
 
     public void GetCurrentTeamName()
     {
-        nameTeamText.text = NameTeam[currentTeam];
+        nameTeamText.text = teamNames[currentTeam];
     }
 
     public void AddTeamScore()
     {
-        ScoreTeam[currentTeam - 1]++;
+        teamScores[currentTeam - 1]++;
     }
     
     public void FinishTeamGame()
     {
         GetComponent<MenuNavigation>().OpenMenu(8);
-        for (int i = 0; i < NameTeam.Length; i++)
+        for (int i = 0; i < GetComponent<TeamSystem>().teamCount; i++)
         {
-            FinishTeamNameText.text = NameTeam[i] + " \n ";
-            FinishScoreText.text = ScoreTeam[i] + " \n ";
-        }        
+            scores.Add(teamNames[i], teamScores[i]);            
+        }
+        var scoresSorted = from score in scores orderby score.Value descending select score;
+        foreach (var item in scoresSorted)
+        {
+            GameObject curScore = Instantiate(teamScorePrefab, scoringContainer.transform);
+            curScore.transform.Find("TeamName").GetComponent<TextMeshProUGUI>().text = item.Key;
+            curScore.transform.Find("TeamPoints").GetComponent<TextMeshProUGUI>().text = item.Value.ToString();
+        }
     }    
 }
