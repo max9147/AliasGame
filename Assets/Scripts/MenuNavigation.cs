@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MenuNavigation : MonoBehaviour
 {
-    public GameObject totalButton;
     public GameObject[] menus;
 
     public void OpenMenu(int menuID)
@@ -30,18 +29,6 @@ public class MenuNavigation : MonoBehaviour
         if (menuID == 2)
         {
             GetComponent<TeamSystem>().ResetTeams();
-        }
-
-        if (menuID ==5)
-        {
-            if (GetComponent<Gameplay>().teamGameSelected)
-            {
-                totalButton.SetActive(true);
-            }
-            else
-            {
-                totalButton.SetActive(false);
-            }
         }
     }
 
