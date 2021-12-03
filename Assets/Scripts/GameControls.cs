@@ -34,7 +34,7 @@ public class GameControls : MonoBehaviour
         {
             Handheld.Vibrate();
         }
-        if (GetComponent<Gameplay>().TeamGameSelected)
+        if (GetComponent<Gameplay>().teamGameSelected)
         {
             GetComponent<Gameplay>().AddTeamScore();
         }

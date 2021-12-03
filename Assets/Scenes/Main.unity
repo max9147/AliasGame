@@ -4832,6 +4832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b3ff5813ee9aa44cb750f68215c180c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalButton: {fileID: 845438662}
   menus:
   - {fileID: 1684179495}
   - {fileID: 1543435028}
@@ -4975,10 +4976,10 @@ MonoBehaviour:
   displayWord: {fileID: 599920321}
   nameTeamText: {fileID: 1321062454}
   rotateScreenTeamName: {fileID: 1321062454}
-  NameTeam: []
-  ScoreTeam: 
+  teamNames: []
+  teamScores: 
   currentTeam: 0
-  TeamGameSelected: 0
+  teamGameSelected: 0
   rotateShowing: 0
 --- !u!114 &689194930
 MonoBehaviour:

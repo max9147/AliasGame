@@ -7,7 +7,6 @@ using System.Linq;
 public class Gameplay : MonoBehaviour
 {
     private string curWord;
-    private Dictionary<string, int> scores = new Dictionary<string, int>();
 
     public GameObject teamScorePrefab;
     public GameObject scoringContainer;
@@ -24,24 +23,25 @@ public class Gameplay : MonoBehaviour
 
     public int currentTeam = 0;
 
-    public bool TeamGameSelected;
+    public bool teamGameSelected;
     public bool rotateShowing = false;
 
     public void StartGame(bool isTeamGame)
     {
+        currentTeam = 0;
         if (isTeamGame)
         {
             TeamSetUp();
             SetCurrentTeam();
-            TeamGameSelected = true;
+            teamGameSelected = true;
         }
         else
         {
-            TeamGameSelected = false;
+            teamGameSelected = false;
             rotateScreen.SetActive(true);
             rotateScreenTeamName.text = "";
         }
-        
+
         availableThemes = GetComponent<StartGame>().GetSelectedThemes();
         for (int i = 0; i < availableThemes.Count; i++)
         {
@@ -132,6 +132,11 @@ public class Gameplay : MonoBehaviour
     
     public void FinishTeamGame()
     {
+        foreach (Transform child in scoringContainer.transform)
+        {
+            Destroy(child.gameObject);
+        }
+        Dictionary<string, int> scores = new Dictionary<string, int>();
         GetComponent<MenuNavigation>().OpenMenu(8);
         for (int i = 0; i < GetComponent<TeamSystem>().teamCount; i++)
         {
