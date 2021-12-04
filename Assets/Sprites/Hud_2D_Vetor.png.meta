@@ -1,0 +1,1284 @@
+fileFormatVersion: 2
+guid: 13d61fcd1492aa4449fc817bd8053435
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6348620953949200985
+    second: Hud_2D_Vetor_0
+  - first:
+      213: 2815147678247006467
+    second: Hud_2D_Vetor_1
+  - first:
+      213: -6080888226414549484
+    second: Hud_2D_Vetor_2
+  - first:
+      213: -8333009480574647660
+    second: Hud_2D_Vetor_3
+  - first:
+      213: 8939413183168542259
+    second: Hud_2D_Vetor_4
+  - first:
+      213: -1902043344190909053
+    second: Hud_2D_Vetor_5
+  - first:
+      213: 3457048900496189951
+    second: Hud_2D_Vetor_6
+  - first:
+      213: 8333580995052839909
+    second: Hud_2D_Vetor_7
+  - first:
+      213: 7178325210011066384
+    second: Hud_2D_Vetor_8
+  - first:
+      213: 4402668130746889187
+    second: Hud_2D_Vetor_9
+  - first:
+      213: 9167329757074637462
+    second: Hud_2D_Vetor_10
+  - first:
+      213: -7011299026438205126
+    second: Hud_2D_Vetor_11
+  - first:
+      213: -7779838497797722193
+    second: Hud_2D_Vetor_12
+  - first:
+      213: 6934165075791147835
+    second: Hud_2D_Vetor_13
+  - first:
+      213: 4389787314066927002
+    second: Hud_2D_Vetor_14
+  - first:
+      213: -1956451635386030410
+    second: Hud_2D_Vetor_15
+  - first:
+      213: 548282807484785810
+    second: Hud_2D_Vetor_16
+  - first:
+      213: 4767855896999682281
+    second: Hud_2D_Vetor_17
+  - first:
+      213: -7924939516493953973
+    second: Hud_2D_Vetor_18
+  - first:
+      213: 294511885342484237
+    second: Hud_2D_Vetor_19
+  - first:
+      213: -4257718666267585625
+    second: Hud_2D_Vetor_20
+  - first:
+      213: -8562083186568657929
+    second: Hud_2D_Vetor_21
+  - first:
+      213: 5847143872703710668
+    second: Hud_2D_Vetor_22
+  - first:
+      213: 3803547728273143844
+    second: Hud_2D_Vetor_23
+  - first:
+      213: 5731867099134522472
+    second: Hud_2D_Vetor_24
+  - first:
+      213: -6089392288943158086
+    second: Hud_2D_Vetor_25
+  - first:
+      213: 5135138331844907940
+    second: Hud_2D_Vetor_26
+  - first:
+      213: 3351410862432309539
+    second: Hud_2D_Vetor_27
+  - first:
+      213: -3889126422916994056
+    second: Hud_2D_Vetor_28
+  - first:
+      213: 3389254134684560132
+    second: Hud_2D_Vetor_29
+  - first:
+      213: 1987412958899215001
+    second: Hud_2D_Vetor_30
+  - first:
+      213: -2069396287448439752
+    second: Hud_2D_Vetor_31
+  - first:
+      213: -3122472517802530993
+    second: Hud_2D_Vetor_32
+  - first:
+      213: 6999558891693036117
+    second: Hud_2D_Vetor_33
+  - first:
+      213: -97691894583048531
+    second: Hud_2D_Vetor_34
+  - first:
+      213: -5465917976031649441
+    second: Hud_2D_Vetor_35
+  - first:
+      213: -8625710488150537731
+    second: Hud_2D_Vetor_36
+  - first:
+      213: -7581433332671357857
+    second: Hud_2D_Vetor_37
+  - first:
+      213: 8068358388764508720
+    second: Hud_2D_Vetor_38
+  - first:
+      213: 6268135235851801561
+    second: Hud_2D_Vetor_39
+  - first:
+      213: -8420453684437671295
+    second: Hud_2D_Vetor_40
+  - first:
+      213: -6270900653643293740
+    second: Hud_2D_Vetor_41
+  - first:
+      213: -7471233149968143051
+    second: Hud_2D_Vetor_42
+  - first:
+      213: 7033953483140222714
+    second: Hud_2D_Vetor_43
+  - first:
+      213: 341024360666355008
+    second: Hud_2D_Vetor_44
+  - first:
+      213: -4204042232771048237
+    second: Hud_2D_Vetor_45
+  - first:
+      213: -8159229219270304969
+    second: Hud_2D_Vetor_46
+  - first:
+      213: 355929022811851323
+    second: Hud_2D_Vetor_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_0
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1922
+        width: 1471
+        height: 926
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9526eb50f15da1850800000000000000
+      internalID: 6348620953949200985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_1
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 1919
+        width: 1470
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 301bd28e5e9611720800000000000000
+      internalID: 2815147678247006467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1600
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 416a4b140685c9ba0800000000000000
+      internalID: -6080888226414549484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_3
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1600
+        width: 309
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 492c26017043b5c80800000000000000
+      internalID: -8333009480574647660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_4
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1595
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33674335dec2f0c70800000000000000
+      internalID: 8939413183168542259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_5
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1600
+        width: 309
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 385da1ae7a59a95e0800000000000000
+      internalID: -1902043344190909053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_6
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1669
+        width: 165
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9ea35a8a7e9ff20800000000000000
+      internalID: 3457048900496189951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_7
+      rect:
+        serializedVersion: 2
+        x: 1675
+        y: 1667
+        width: 180
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3221503c3d6a370800000000000000
+      internalID: 8333580995052839909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_8
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1605
+        width: 310
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 010e0f00fb88e9360800000000000000
+      internalID: 7178325210011066384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_9
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1605
+        width: 311
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3f91da65b691d30800000000000000
+      internalID: 4402668130746889187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_10
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 1600
+        width: 309
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6924d4de7d5e83f70800000000000000
+      internalID: 9167329757074637462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_11
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 1605
+        width: 311
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31db13deacd2be90800000000000000
+      internalID: -7011299026438205126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_12
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1281
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafabd80b16780490800000000000000
+      internalID: -7779838497797722193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_13
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1281
+        width: 309
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b33737cc56a1b3060800000000000000
+      internalID: 6934165075791147835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_14
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1277
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9da976dd48abec30800000000000000
+      internalID: 4389787314066927002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_15
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 1281
+        width: 309
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b665947a9949d4e0800000000000000
+      internalID: -1956451635386030410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_16
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 1345
+        width: 125
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294a598fe44eb9700800000000000000
+      internalID: 548282807484785810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_17
+      rect:
+        serializedVersion: 2
+        x: 1681
+        y: 1338
+        width: 72
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0eae85da3da2240800000000000000
+      internalID: 4767855896999682281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_18
+      rect:
+        serializedVersion: 2
+        x: 1764
+        y: 1342
+        width: 70
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b440ce47f75f40290800000000000000
+      internalID: -7924939516493953973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_19
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 1280
+        width: 310
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0728f3dff0561400800000000000000
+      internalID: 294511885342484237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_20
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 1280
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3129f6e6b89e4c0800000000000000
+      internalID: -4257718666267585625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_21
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 1277
+        width: 309
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f30b37a4be5d2980800000000000000
+      internalID: -8562083186568657929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_22
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 1280
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc54b1b6f5a352150800000000000000
+      internalID: 5847143872703710668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_23
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 964
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 428f6fdb18ae8c430800000000000000
+      internalID: 3803547728273143844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_24
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 964
+        width: 309
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86479a702ceab8f40800000000000000
+      internalID: 5731867099134522472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_25
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 959
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abc4a87e9f12e7ba0800000000000000
+      internalID: -6089392288943158086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_26
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 964
+        width: 309
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a39b1e0b1da34740800000000000000
+      internalID: 5135138331844907940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_27
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 1023
+        width: 143
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321d9af3c6a928e20800000000000000
+      internalID: 3351410862432309539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_28
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1178
+        width: 49
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb6273bf1c070ac0800000000000000
+      internalID: -3889126422916994056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_29
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 1022
+        width: 167
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ba56fadac090f20800000000000000
+      internalID: 3389254134684560132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_30
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 970
+        width: 310
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a123d6e85b49b10800000000000000
+      internalID: 1987412958899215001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_31
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 970
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834af1b6a070843e0800000000000000
+      internalID: -2069396287448439752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_32
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 967
+        width: 309
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47e573e9cfbaa4d0800000000000000
+      internalID: -3122472517802530993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_33
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 970
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5525acb0abd632160800000000000000
+      internalID: 6999558891693036117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_34
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 1109
+        width: 44
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da641fd4dbde4aef0800000000000000
+      internalID: -97691894583048531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_35
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 1027
+        width: 37
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f51263b7f882524b0800000000000000
+      internalID: -5465917976031649441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_36
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 645
+        width: 309
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df90d6213025b4880800000000000000
+      internalID: -8625710488150537731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_37
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 645
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c51d55d8659c690800000000000000
+      internalID: -7581433332671357857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_38
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 641
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0320ad2e43198ff60800000000000000
+      internalID: 8068358388764508720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_39
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 645
+        width: 311
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d35e0979c3ecf650800000000000000
+      internalID: 6268135235851801561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_40
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 713
+        width: 199
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182a67bccf9842b80800000000000000
+      internalID: -8420453684437671295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_41
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 703
+        width: 286
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db93d5841949f8a0800000000000000
+      internalID: -6270900653643293740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_42
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 653
+        width: 310
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53da60ec809d05890800000000000000
+      internalID: -7471233149968143051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_43
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 653
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afec139ec6f9d9160800000000000000
+      internalID: 7033953483140222714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_44
+      rect:
+        serializedVersion: 2
+        x: 2566
+        y: 648
+        width: 309
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045d54569df8bb400800000000000000
+      internalID: 341024360666355008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_45
+      rect:
+        serializedVersion: 2
+        x: 2881
+        y: 653
+        width: 311
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dc01fefcdd38a5c0800000000000000
+      internalID: -4204042232771048237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_46
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 81
+        width: 1156
+        height: 439
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73bd768214894ce80800000000000000
+      internalID: -8159229219270304969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hud_2D_Vetor_47
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 69
+        width: 1157
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3ac3f97f8380f400800000000000000
+      internalID: 355929022811851323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
