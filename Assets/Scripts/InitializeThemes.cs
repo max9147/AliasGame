@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InitializeThemes : MonoBehaviour
 {
     private GameObject curButton;
 
+    public Button watchAdButton;
     public GameObject themeButtonPrefab;
     public GameObject mainContainerDuel;
     public GameObject freeContainerDuel;
@@ -19,6 +21,7 @@ public class InitializeThemes : MonoBehaviour
     public Themes[] freeThemes;
     public Themes[] adThemes;
     public Themes[] paidThemes;
+    public Themes curAdTheme;
 
     private void Start()
     {
@@ -28,11 +31,13 @@ public class InitializeThemes : MonoBehaviour
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName; // Находим на кнопке текст и меняем его на название текущей рассматриваемой темы
             curButton.GetComponent<ThemeSelection>().theme = item; // Присваеваем переменной theme из скрипта на создаваемой кнопке нужную тему
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject; // А в переменной menuSystem присваеваем объект на котором находится ЭТОТ скрипт (InitializeThemes)
+            curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
 
             curButton = Instantiate(themeButtonPrefab, freeContainerTeam.transform); // Тут то же но для командного меню
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
+            curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
         }
         freeContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(freeThemes.Length / 4f) * 245);
         freeContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(freeThemes.Length / 4f) * 245);
@@ -43,11 +48,13 @@ public class InitializeThemes : MonoBehaviour
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
+            curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
 
             curButton = Instantiate(themeButtonPrefab, adContainerTeam.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
+            curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
         }
         adContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
         adContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
@@ -58,11 +65,13 @@ public class InitializeThemes : MonoBehaviour
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
+            curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
 
             curButton = Instantiate(themeButtonPrefab, paidContainerTeam.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
+            curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
         }
         paidContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
         paidContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);

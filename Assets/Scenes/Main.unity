@@ -4373,6 +4373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4905534853a62346a5b37c34ac2387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  watchAdButton: {fileID: 979947958}
   themeButtonPrefab: {fileID: 8223799800527255840, guid: 6835d3169c427704e9cb766b78b87d5d, type: 3}
   mainContainerDuel: {fileID: 1572012932}
   freeContainerDuel: {fileID: 164355979}
@@ -4390,11 +4391,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: efb3afd84a60d0f4eaea370bf78a069e, type: 2}
   - {fileID: 11400000, guid: a6aa6783bbef674479c5bd92822ad9de, type: 2}
   - {fileID: 11400000, guid: 68df5353c200c534c80d2eb9bfebf311, type: 2}
+  - {fileID: 11400000, guid: e30699b1ce89d754e9f31af0a1eb61e9, type: 2}
   adThemes:
   - {fileID: 11400000, guid: 1377672c8a13f4c4aa92e7fff289e7d2, type: 2}
   - {fileID: 11400000, guid: 9df834e8a1d9abc46a8a53b7390cbe42, type: 2}
+  - {fileID: 11400000, guid: 2784aa8079d4b1d408ac2d5a68544421, type: 2}
   paidThemes:
   - {fileID: 11400000, guid: 894857bf4a712934aabeae1ff8155002, type: 2}
+  curAdTheme: {fileID: 0}
 --- !u!114 &689194924
 MonoBehaviour:
   m_ObjectHideFlags: 0
