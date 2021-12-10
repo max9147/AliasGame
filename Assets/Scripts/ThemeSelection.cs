@@ -14,6 +14,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
 
     public Button watchAdButton;
     public GameObject menuSystem;
+    public GameObject paidContent;
     public Themes theme;
 
     private void Start()
@@ -33,13 +34,44 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 isSelected = true;
                 menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
             }
-            else
-            {                
-                menuSystem.GetComponent<MenuNavigation>().OpenMenu(7);
-                menuSystem.GetComponent<InitializeThemes>().curAdTheme = theme;
-                watchAdButton.onClick.AddListener(delegate { WatchAd(); });
-                menuSystem.GetComponent<StartGame>().GetDescriptionThemes(theme.description);
-                menuSystem.GetComponent<StartGame>().GetNameThemes(theme.themeName);
+            else if (theme.type == themeType.ad)
+            {
+                if (menuSystem.GetComponent<IAP>().GetVIPStatus())
+                {
+                    menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
+                    transform.Find("Check").gameObject.SetActive(true);
+                    isSelected = true;
+                    menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
+                }
+                else
+                {
+                    watchAdButton.gameObject.SetActive(true);
+                    paidContent.SetActive(false);
+                    menuSystem.GetComponent<MenuNavigation>().OpenMenu(7);
+                    menuSystem.GetComponent<InitializeThemes>().curAdTheme = theme;
+                    watchAdButton.onClick.AddListener(delegate { WatchAd(); });
+                    menuSystem.GetComponent<StartGame>().GetDescriptionThemes(theme.description);
+                    menuSystem.GetComponent<StartGame>().GetNameThemes(theme.themeName);
+                }
+            }
+            else if (theme.type == themeType.paid)
+            {
+                if (menuSystem.GetComponent<IAP>().GetVIPStatus())
+                {
+                    menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
+                    transform.Find("Check").gameObject.SetActive(true);
+                    isSelected = true;
+                    menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
+                }
+                else
+                {
+                    watchAdButton.gameObject.SetActive(false);
+                    paidContent.SetActive(true);
+                    menuSystem.GetComponent<MenuNavigation>().OpenMenu(7);
+                    menuSystem.GetComponent<InitializeThemes>().curAdTheme = theme;
+                    menuSystem.GetComponent<StartGame>().GetDescriptionThemes(theme.description);
+                    menuSystem.GetComponent<StartGame>().GetNameThemes(theme.themeName);
+                }
             }
         }
         else
