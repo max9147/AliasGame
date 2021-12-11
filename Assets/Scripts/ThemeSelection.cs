@@ -9,6 +9,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
 {
     private bool isSelected = false;
     private bool adTestMode = true;
+    private bool adSkip = false;
     private string gameID = "4497109";
     private string adType = "Rewarded_Android";
 
@@ -36,7 +37,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
             }
             else if (theme.type == themeType.ad)
             {
-                if (menuSystem.GetComponent<IAP>().GetVIPStatus())
+                if (menuSystem.GetComponent<IAP>().GetVIPStatus() || adSkip)
                 {
                     menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
                     transform.Find("Check").gameObject.SetActive(true);
@@ -130,6 +131,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
                 transform.Find("Check").gameObject.SetActive(true);
                 isSelected = true;
+                adSkip = true;
                 menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
                 menuSystem.GetComponent<MenuNavigation>().CloseDescription();
             }
@@ -138,5 +140,10 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 Debug.Log("Ad failed");
             }
         }
+    }
+
+    public void DisableAdSkip()
+    {
+        adSkip = false;
     }
 }

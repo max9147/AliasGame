@@ -8,7 +8,7 @@ public class MenuNavigation : MonoBehaviour
 
     public void OpenMenu(int menuID)
     {
-        if (menuID != 7)
+        if (menuID != 7 && menuID != 9)
         {
             foreach (var item in menus)
             {
@@ -35,6 +35,11 @@ public class MenuNavigation : MonoBehaviour
     public void CloseDescription()
     {
         menus[7].SetActive(false);
+    }
+
+    public void CloseVIP()
+    {
+        menus[9].SetActive(false);
     }
 
     public void RestartRound()

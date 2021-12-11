@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Purchasing;
 using UnityEngine.UI;
 
 public class InitializeThemes : MonoBehaviour
@@ -9,6 +10,8 @@ public class InitializeThemes : MonoBehaviour
     private GameObject curButton;
 
     public Button watchAdButton;
+    public GameObject VIPButtonDuel;
+    public GameObject VIPButtonTeam;
     public GameObject themeButtonPrefab;
     public GameObject mainContainerDuel;
     public GameObject freeContainerDuel;
@@ -71,7 +74,7 @@ public class InitializeThemes : MonoBehaviour
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
-            curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
+            curButton.GetComponent<ThemeSelection>().paidContent = paidContent;            
 
             curButton = Instantiate(themeButtonPrefab, paidContainerTeam.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
@@ -79,6 +82,17 @@ public class InitializeThemes : MonoBehaviour
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
+
+            if (GetComponent<IAP>().GetVIPStatus())
+            {
+                VIPButtonDuel.SetActive(false);
+                VIPButtonTeam.SetActive(false);
+            }
+            else
+            {
+                VIPButtonDuel.SetActive(true);
+                VIPButtonTeam.SetActive(true);
+            }
         }
         paidContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
         paidContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);

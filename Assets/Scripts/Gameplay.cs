@@ -52,7 +52,7 @@ public class Gameplay : MonoBehaviour
         }
         availableWordsBackup = new List<string>(availableWords);
         ChangeWord();
-        rotateShowing = true;
+        rotateShowing = true;        
     }
 
     private void Update()

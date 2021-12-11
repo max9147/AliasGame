@@ -19,6 +19,11 @@ public class StartGame : MonoBehaviour
 
     public void LaunchGame(bool isTeamGame)
     {
+        foreach (var item in GameObject.FindGameObjectsWithTag("Theme"))
+        {
+            item.GetComponent<ThemeSelection>().DisableAdSkip();
+        }
+
         GetComponent<MenuNavigation>().OpenMenu(4);
         GetComponent<Gameplay>().StartGame(isTeamGame);
         GetComponent<TimerControl>().TimerCount();        
