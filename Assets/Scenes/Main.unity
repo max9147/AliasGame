@@ -4884,6 +4884,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1377672c8a13f4c4aa92e7fff289e7d2, type: 2}
   - {fileID: 11400000, guid: 9df834e8a1d9abc46a8a53b7390cbe42, type: 2}
   - {fileID: 11400000, guid: 2784aa8079d4b1d408ac2d5a68544421, type: 2}
+  - {fileID: 11400000, guid: 7a08b667fc6245b4ea5c5bc695c30150, type: 2}
+  - {fileID: 11400000, guid: 2685c28073fb84148b5af338dbd4c480, type: 2}
   paidThemes:
   - {fileID: 11400000, guid: 894857bf4a712934aabeae1ff8155002, type: 2}
   curAdTheme: {fileID: 0}
