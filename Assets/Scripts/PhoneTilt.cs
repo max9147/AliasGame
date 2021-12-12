@@ -47,5 +47,6 @@ public class PhoneTilt : MonoBehaviour
     public void ChangeSensitivity()
     {
         sensitivity = sensSlider.value * 10;
+        PlayerPrefs.SetFloat("Sensitivity", sensSlider.value);
     }
 }
