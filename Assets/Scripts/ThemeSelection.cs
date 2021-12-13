@@ -12,7 +12,8 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     private bool adSkip = false;
     private string gameID = "4497109";
     private string adType = "Rewarded_Android";
-
+    public Color colorBorder;
+    public Color transparentPanel;
     public Button watchAdButton;
     public GameObject menuSystem;
     public GameObject paidContent;
@@ -32,6 +33,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
             {
                 menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
                 transform.Find("Check").gameObject.SetActive(true);
+                transform.Find("Panel").GetComponent<Image>().color = colorBorder;
                 isSelected = true;
                 menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
             }
@@ -79,6 +81,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
         {
             menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
             transform.Find("Check").gameObject.SetActive(false);
+            transform.Find("Panel").GetComponent<Image>().color = transparentPanel;
             isSelected = false;
             menuSystem.GetComponent<StartGame>().DecreaseSelectedCount();
         }

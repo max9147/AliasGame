@@ -9,7 +9,7 @@ public enum themeType { free, ad, paid };
 public class Themes : ScriptableObject
 {
     public string themeName;
-    public Image themeImage;
+    public Sprite themeImage;
     public string description;
     public themeType type;
     public string[] words;

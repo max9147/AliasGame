@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Animals
   m_EditorClassIdentifier: 
   themeName: "\u0416\u0438\u0432\u043E\u0442\u043D\u044B\u0435"
-  themeImage: {fileID: 0}
+  themeImage: {fileID: 21300000, guid: 377e6538797fb484c87201b87d159a8c, type: 3}
   description: 
+  type: 0
   words:
   - "\u0410\u0438\u0441\u0442"
   - "\u0410\u043A\u0443\u043B\u0430"

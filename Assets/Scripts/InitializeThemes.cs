@@ -36,13 +36,21 @@ public class InitializeThemes : MonoBehaviour
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject; // А в переменной menuSystem присваеваем объект на котором находится ЭТОТ скрипт (InitializeThemes)
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
-
+            if (item.themeImage != null)
+            {
+                curButton.GetComponent<Image>().sprite = item.themeImage;
+                
+            }
             curButton = Instantiate(themeButtonPrefab, freeContainerTeam.transform); // Тут то же но для командного меню
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
+            if (item.themeImage != null)
+            {
+                curButton.GetComponent<Image>().sprite = item.themeImage;
+            }
         }
         freeContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(freeThemes.Length / 4f) * 245);
         freeContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(freeThemes.Length / 4f) * 245);
@@ -55,13 +63,20 @@ public class InitializeThemes : MonoBehaviour
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
-
+            if (item.themeImage != null)
+            {
+                curButton.GetComponent<Image>().sprite = item.themeImage;
+            }
             curButton = Instantiate(themeButtonPrefab, adContainerTeam.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
+            if (item.themeImage != null)
+            {
+                curButton.GetComponent<Image>().sprite = item.themeImage;
+            }
         }
         adContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
         adContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
@@ -73,15 +88,21 @@ public class InitializeThemes : MonoBehaviour
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
-            curButton.GetComponent<ThemeSelection>().paidContent = paidContent;            
-
+            curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
+            if (item.themeImage != null)
+            {
+                curButton.GetComponent<Image>().sprite = item.themeImage;
+            }
             curButton = Instantiate(themeButtonPrefab, paidContainerTeam.transform);
             curButton.transform.Find("ThemeName").GetComponent<TextMeshProUGUI>().text = item.themeName;
             curButton.GetComponent<ThemeSelection>().theme = item;
             curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
-
+            if (item.themeImage != null)
+            {
+                curButton.GetComponent<Image>().sprite = item.themeImage;
+            }
             if (!GetComponent<IAP>().GetVIPStatus())
             {
                 curButton = Instantiate(VIPButtonPrefab, paidContainerDuel.transform);
@@ -89,6 +110,7 @@ public class InitializeThemes : MonoBehaviour
                 curButton = Instantiate(VIPButtonPrefab, paidContainerTeam.transform);
                 curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
             }
+           
         }
         paidContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(paidThemes.Length / 4f) * 245);
         paidContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(paidThemes.Length / 4f) * 245);

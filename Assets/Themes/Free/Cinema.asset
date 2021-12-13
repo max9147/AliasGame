@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Cinema
   m_EditorClassIdentifier: 
   themeName: "\u041A\u0438\u043D\u043E"
-  themeImage: {fileID: 0}
+  themeImage: {fileID: 21300000, guid: efcfec1f7eb47d14896077068caa3b0d, type: 3}
+  description: 
+  type: 0
   words:
   - "\u041F\u043E\u0431\u0435\u0433 \u0438\u0437 \u0428\u043E\u0443\u0448\u0435\u043D\u043A\u0430"
   - "\u041A\u0440\u0435\u0441\u0442\u043D\u044B\u0439 \u043E\u0442\u0435\u0446"
