@@ -10,8 +10,7 @@ public class InitializeThemes : MonoBehaviour
     private GameObject curButton;
 
     public Button watchAdButton;
-    public GameObject VIPButtonDuel;
-    public GameObject VIPButtonTeam;
+    public GameObject VIPButtonPrefab;
     public GameObject themeButtonPrefab;
     public GameObject mainContainerDuel;
     public GameObject freeContainerDuel;
@@ -83,19 +82,16 @@ public class InitializeThemes : MonoBehaviour
             curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
             curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
 
-            if (GetComponent<IAP>().GetVIPStatus())
+            if (!GetComponent<IAP>().GetVIPStatus())
             {
-                VIPButtonDuel.SetActive(false);
-                VIPButtonTeam.SetActive(false);
-            }
-            else
-            {
-                VIPButtonDuel.SetActive(true);
-                VIPButtonTeam.SetActive(true);
+                curButton = Instantiate(VIPButtonPrefab, paidContainerDuel.transform);
+                curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
+                curButton = Instantiate(VIPButtonPrefab, paidContainerTeam.transform);
+                curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
             }
         }
-        paidContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
-        paidContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
+        paidContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(paidThemes.Length / 4f) * 245);
+        paidContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(paidThemes.Length / 4f) * 245);
 
         mainContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(1000, 200 + freeContainerDuel.GetComponent<RectTransform>().sizeDelta.y + adContainerDuel.GetComponent<RectTransform>().sizeDelta.y + paidContainerDuel.GetComponent<RectTransform>().sizeDelta.y);
         mainContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(1000, 200 + freeContainerDuel.GetComponent<RectTransform>().sizeDelta.y + adContainerDuel.GetComponent<RectTransform>().sizeDelta.y + paidContainerDuel.GetComponent<RectTransform>().sizeDelta.y);

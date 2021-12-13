@@ -80,8 +80,11 @@ public class IAP : MonoBehaviour, IStoreListener
         {
             PlayerPrefs.SetInt("VIP", 0);
             isVIP = true;
-            VIPButtonDuel.SetActive(false);
-            VIPButtonTeam.SetActive(false);
+            GameObject[] VIPS = GameObject.FindGameObjectsWithTag("VIP");
+            foreach (var item in VIPS)
+            {
+                Destroy(item);
+            }
             GetComponent<MenuNavigation>().CloseVIP();
         }
         return PurchaseProcessingResult.Complete;
