@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24aa36a8886bd6641ac9fdc708bf3839, type: 3}
+  m_Name: Games
+  m_EditorClassIdentifier: 
+  themeName: "\u0418\u0433\u0440\u044B"
+  themeImage: {fileID: 21300000, guid: c99c205f27180ca4692c3c4cdf310aac, type: 3}
+  description: 
+  type: 0
+  words:
+  - PUBG
+  - CrossFire
+  - Dungeon Fighter
+  - Minecraft
+  - Pac-Man
+  - Candy Crush
+  - Among Us
+  - Fortnite
+  - RuneScape
+  - Roblox
+  - MapleStory
+  - Tetris
+  - Animal Jam
+  - World of Tanks
+  - Grand Theft Auto
+  - League of Legends
+  - World of Warcraft
+  - Happy Farm
+  - The Sims
+  - Hearthstone
+  - Apex Legends
+  - Call of Duty
+  - FarmVille
+  - Ragnarok Online
+  - Rocket League
+  - Overwatch
+  - Lineage
+  - Perfect World
+  - Team Fortress
+  - Tom Clancy's Rainbow Six Siege
+  - Warframe
+  - 'Counter-Strike: Global Offensive'
+  - Teamfight Tactics
+  - FIFA
+  - Black Desert
+  - TERA
+  - Unturned
+  - Street Fighter
+  - Forza
+  - Lefft 4 Dead
+  - Final Fantasy
+  - Sea of Thieves
+  - Blade & Soul
+  - Payday
+  - The Last of Us
+  - osu!
+  - Doom
+  - For Honor
+  - Trove
+  - Puyopuyo
+  - Paladins
+  - Battlefield
+  - The Elder Scrolls
+  - Dota 2
+  - H1Z1
+  - 'Ark: Survival Evolved'
+  - AdVenture Capitalist
+  - Amnesia
+  - Arma
+  - BeamNG.drive
+  - The Binding of Isaac
+  - Brawhalla
+  - Bunny Hop League
+  - Burnout
+  - Clicker Heroes
+  - Crab Game
+  - A Dance of Fire and Ice
+  - The Dark Pictures Anthology
+  - Dead by Daylight
+  - Dead Island
+  - Dead Space
+  - Deceit
+  - Depth
+  - Deus Ex
+  - Doki Doki Literature Club
+  - Don't Starve
+  - Dota Underlords
+  - Duke Nukem
+  - Evolve
+  - Far Cry
+  - Fallout
+  - Fall Guys
+  - FlatOut
+  - The Forest
+  - Garry's Mod
+  - Goat Simulator
+  - Golf it!
+  - GRID
+  - Half-Life
+  - 'Human: Fall Flat'
+  - Just Cause
+  - Keep Talking and Nobody Explodes
+  - No More Room in Hell
+  - Northgard
+  - Operation Tango
+  - Orcs Must Die!
+  - Path of Exile
+  - Phasmophobia
+  - PICO PARK
+  - Portal
+  - Q.U.B.E.
+  - Raft
+  - Ring of Elysium
+  - Rust
+  - Serious Sam
+  - Sid Meier's Civilization
+  - Solar
+  - Spintires
+  - Spiral Knights
+  - The Stanley Parable
+  - Street Racing Syndicate
+  - Need for Speed
+  - Trackmania
+  - Surgeon Simulator
+  - Tabletop Simulator
+  - Terraria
+  - Toki Tori
+  - Total War
+  - Tower Unity
+  - Universe Sandbox
+  - Unturned
+  - Valheim
+  - VRChat
+  - The Walking Dead
+  - We Were Here
+  - The Witcher
+  - Stardew Valley
+  - The Talos Principle
+  - Vampyr
+  - Crush Crush
+  - Pathologic
+  - Subnautica
+  - Resident Evil
+  - Cuphead
+  - Starbound
+  - Green Hell
+  - Inscryption
+  - Everlasting Summer
+  - Remnant
+  - Synergy
+  - Life is Strange
+  - L.A. Noire
+  - Mafia
+  - Borderlands
+  - The Council
+  - 'Detroit: Become Human'
+  - Dishonored
+  - Thief
+  - The Witness
+  - The Wolf Among Us
+  - Darkest Dungeon
+  - Beholder
+  - Sally Face
+  - Muck
+  - Plague Inc
+  - Katana ZERO
+  - Fishing Planet
+  - Papers, Please
+  - "\u041A\u043E\u043F\u0430\u0442\u0435\u043B\u044C \u041E\u043D\u043B\u0430\u0439\u043D"
+  - Reigns
+  - Escape from Tarkov
+  - Valorant
+  - Pokemon
+  - Genshin Impact
+  - Warthunder
+  - Overwatch
+  - Super Mario
+  - Diablo
+  - Farming Simulator
+  - Euro Truck Simulator
+  - Project Zomboid
+  - Jump King
+  - DayZ
+  - SMITE
+  - Dark Sould
+  - God of War
+  - Dragonborne
+  - Satisfactory
+  - Factorio
+  - Hades
+  - Gothic
+  - Mortal Combat
+  - Red Dead Redemption
+  - Heroes of the Storm
+  - Tekken
+  - F1
+  - iRacing
+  - Assassin's Creed
+  - Brawl Stars
+  - The Legend of Zelda
+  - Sekiro
+  - Yu-Gi-Oh
+  - Overcooked
+  - RuneScape
+  - The Hunter
+  - Bloons
+  - Jackbox Party Packs
+  - Escape Simulator
+  - Guitar Hero
+  - StepMania
+  - Beat Saber
+  - No Man's Sky
+  - Splatoon
+  - Metro
+  - STALKER
+  - Danganronpa
+  - Artifact
+  - Warface
+  - XCOM
+  - Yakuza
+  - 'NieR: Automata'
+  - Tomb Raider
+  - Dragon Age
+  - Halo
+  - The Crew
+  - Trove
+  - Risk of Rain
+  - Star Wars Battlefront
+  - Getting Over It
+  - Azur Lane
+  - 'Cities: Skylines'
+  - Mass Effect
+  - Hitman

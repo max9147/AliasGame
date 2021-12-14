@@ -12,9 +12,10 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     private bool adSkip = false;
     private string gameID = "4497109";
     private string adType = "Rewarded_Android";
-    public Color colorBorder;
-    public Color transparentPanel;
+
     public Button watchAdButton;
+    public Color colorSelected;
+    public Color colorUnselected;
     public GameObject menuSystem;
     public GameObject paidContent;
     public Themes theme;
@@ -32,8 +33,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
             if (theme.type == themeType.free)
             {
                 menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
-                transform.Find("Check").gameObject.SetActive(true);
-                transform.Find("Panel").GetComponent<Image>().color = colorBorder;
+                transform.Find("ThemeBackground").GetComponent<Image>().color = colorSelected;
                 isSelected = true;
                 menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
             }
@@ -42,7 +42,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 if (menuSystem.GetComponent<IAP>().GetVIPStatus() || adSkip)
                 {
                     menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
-                    transform.Find("Check").gameObject.SetActive(true);
+                    transform.Find("ThemeBackground").GetComponent<Image>().color = colorSelected;
                     isSelected = true;
                     menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
                 }
@@ -62,7 +62,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 if (menuSystem.GetComponent<IAP>().GetVIPStatus())
                 {
                     menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
-                    transform.Find("Check").gameObject.SetActive(true);
+                    transform.Find("ThemeBackground").GetComponent<Image>().color = colorSelected;
                     isSelected = true;
                     menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
                 }
@@ -80,8 +80,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
         else
         {
             menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
-            transform.Find("Check").gameObject.SetActive(false);
-            transform.Find("Panel").GetComponent<Image>().color = transparentPanel;
+            transform.Find("ThemeBackground").GetComponent<Image>().color = colorUnselected;
             isSelected = false;
             menuSystem.GetComponent<StartGame>().DecreaseSelectedCount();
         }
@@ -92,7 +91,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
         if (isSelected)
         {
             menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
-            transform.Find("Check").gameObject.SetActive(false);
+            transform.Find("ThemeBackground").GetComponent<Image>().color = colorUnselected;
             isSelected = false;
             menuSystem.GetComponent<StartGame>().ResetSelectedCount();
         }
@@ -103,10 +102,6 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
         if (Advertisement.IsReady())
         {
             Advertisement.Show(adType);
-        }
-        else
-        {
-            Debug.Log("Ad not ready");
         }
     }
 
@@ -132,15 +127,11 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
             if (showResult == ShowResult.Finished)
             {
                 menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
-                transform.Find("Check").gameObject.SetActive(true);
+                transform.Find("ThemeBackground").GetComponent<Image>().color = colorSelected;
                 isSelected = true;
                 adSkip = true;
                 menuSystem.GetComponent<StartGame>().IncreaseSelectedCount();
                 menuSystem.GetComponent<MenuNavigation>().CloseDescription();
-            }
-            else
-            {
-                Debug.Log("Ad failed");
             }
         }
     }

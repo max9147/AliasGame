@@ -6,9 +6,6 @@ using UnityEngine.Purchasing;
 
 public class IAP : MonoBehaviour, IStoreListener
 {
-    public GameObject VIPButtonDuel;
-    public GameObject VIPButtonTeam;
-
     private static IStoreController storeController;
     private static IExtensionProvider extensionProvider;
     private static string payID = "VIP";
@@ -80,8 +77,7 @@ public class IAP : MonoBehaviour, IStoreListener
         {
             PlayerPrefs.SetInt("VIP", 0);
             isVIP = true;
-            GameObject[] VIPS = GameObject.FindGameObjectsWithTag("VIP");
-            foreach (var item in VIPS)
+            foreach (var item in GetComponent<InitializeThemes>().VIPButtons)
             {
                 Destroy(item);
             }

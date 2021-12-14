@@ -4859,24 +4859,30 @@ MonoBehaviour:
   watchAdButton: {fileID: 979947958}
   VIPButtonPrefab: {fileID: 3583421473977427753, guid: ccd19eaad6726b74b91c679d969649a1, type: 3}
   themeButtonPrefab: {fileID: 8223799800527255840, guid: 6835d3169c427704e9cb766b78b87d5d, type: 3}
+  rectDuel: {fileID: 1806412767}
   mainContainerDuel: {fileID: 1572012932}
   freeContainerDuel: {fileID: 164355979}
   adContainerDuel: {fileID: 828098094}
   paidContainerDuel: {fileID: 647449347}
+  rectTeam: {fileID: 1855843888}
   mainContainerTeam: {fileID: 2097749700}
   freeContainerTeam: {fileID: 1089827117}
   adContainerTeam: {fileID: 1435658683}
   paidContainerTeam: {fileID: 365485110}
   paidContent: {fileID: 1881128992}
+  VIPButtons: []
   freeThemes:
   - {fileID: 11400000, guid: 5e58bc7099fd54740a63abe535ffdc3e, type: 2}
-  - {fileID: 11400000, guid: 432951bcaae60a940955d9c8866f0405, type: 2}
-  - {fileID: 11400000, guid: 15d2ce0bf0f30ef43812e9eb89bb615a, type: 2}
-  - {fileID: 11400000, guid: c4a25680f79d7b340818edaf8630e1f1, type: 2}
-  - {fileID: 11400000, guid: efb3afd84a60d0f4eaea370bf78a069e, type: 2}
-  - {fileID: 11400000, guid: a6aa6783bbef674479c5bd92822ad9de, type: 2}
-  - {fileID: 11400000, guid: 68df5353c200c534c80d2eb9bfebf311, type: 2}
+  - {fileID: 11400000, guid: d481a9aee3a2392478e01a6081953d59, type: 2}
+  - {fileID: 11400000, guid: c8592d869b242dc4a9f273ae67e69257, type: 2}
   - {fileID: 11400000, guid: e30699b1ce89d754e9f31af0a1eb61e9, type: 2}
+  - {fileID: 11400000, guid: 432951bcaae60a940955d9c8866f0405, type: 2}
+  - {fileID: 11400000, guid: a6aa6783bbef674479c5bd92822ad9de, type: 2}
+  - {fileID: 11400000, guid: be96189e1c6f367458996ba0c44a6c57, type: 2}
+  - {fileID: 11400000, guid: c4a25680f79d7b340818edaf8630e1f1, type: 2}
+  - {fileID: 11400000, guid: 15d2ce0bf0f30ef43812e9eb89bb615a, type: 2}
+  - {fileID: 11400000, guid: 68df5353c200c534c80d2eb9bfebf311, type: 2}
+  - {fileID: 11400000, guid: efb3afd84a60d0f4eaea370bf78a069e, type: 2}
   adThemes:
   - {fileID: 11400000, guid: 1377672c8a13f4c4aa92e7fff289e7d2, type: 2}
   - {fileID: 11400000, guid: 9df834e8a1d9abc46a8a53b7390cbe42, type: 2}
@@ -5041,8 +5047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70f19898afee94f4195512c83c56cde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VIPButtonDuel: {fileID: 0}
-  VIPButtonTeam: {fileID: 0}
 --- !u!1 &703102152
 GameObject:
   m_ObjectHideFlags: 0

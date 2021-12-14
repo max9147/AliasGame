@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 24aa36a8886bd6641ac9fdc708bf3839, type: 3}
-  m_Name: Proffesions
+  m_Name: Professions
   m_EditorClassIdentifier: 
   themeName: "\u041F\u0440\u043E\u0444\u0435\u0441\u0441\u0438\u0438"
   themeImage: {fileID: 21300000, guid: a6a639269523ed94faf66898bf8b4369, type: 3}
