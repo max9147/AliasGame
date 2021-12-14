@@ -4874,7 +4874,6 @@ MonoBehaviour:
   freeThemes:
   - {fileID: 11400000, guid: 5e58bc7099fd54740a63abe535ffdc3e, type: 2}
   - {fileID: 11400000, guid: d481a9aee3a2392478e01a6081953d59, type: 2}
-  - {fileID: 11400000, guid: c8592d869b242dc4a9f273ae67e69257, type: 2}
   - {fileID: 11400000, guid: e30699b1ce89d754e9f31af0a1eb61e9, type: 2}
   - {fileID: 11400000, guid: 432951bcaae60a940955d9c8866f0405, type: 2}
   - {fileID: 11400000, guid: a6aa6783bbef674479c5bd92822ad9de, type: 2}
