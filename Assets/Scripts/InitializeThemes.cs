@@ -10,6 +10,7 @@ public class InitializeThemes : MonoBehaviour
     private GameObject curButton;
 
     public Button watchAdButton;
+    public Button[] paidThemeButtons;
     public GameObject VIPButtonPrefab;
     public GameObject themeButtonPrefab;
     public GameObject rectDuel;
@@ -56,17 +57,19 @@ public class InitializeThemes : MonoBehaviour
             curButton = Instantiate(themeButtonPrefab, paidContainerDuel.transform);
             SetupTheme(item);
             curButton = Instantiate(themeButtonPrefab, paidContainerTeam.transform);
-            SetupTheme(item);
-            if (!GetComponent<IAP>().GetVIPStatus())
-            {
-                curButton = Instantiate(VIPButtonPrefab, paidContainerDuel.transform);
-                curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
-                VIPButtons.Add(curButton);
-                curButton = Instantiate(VIPButtonPrefab, paidContainerTeam.transform);
-                curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
-                VIPButtons.Add(curButton);
-            }           
+            SetupTheme(item);                  
         }
+
+        if (!GetComponent<IAP>().GetVIPStatus())
+        {
+            curButton = Instantiate(VIPButtonPrefab, paidContainerDuel.transform);
+            curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
+            VIPButtons.Add(curButton);
+            curButton = Instantiate(VIPButtonPrefab, paidContainerTeam.transform);
+            curButton.GetComponent<Button>().onClick.AddListener(delegate { GetComponent<MenuNavigation>().OpenMenu(9); });
+            VIPButtons.Add(curButton);
+        }
+
         paidContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil((paidThemes.Length + 1) / 4f) * 245);
         paidContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil((paidThemes.Length + 1) / 4f) * 245);
 
@@ -83,6 +86,7 @@ public class InitializeThemes : MonoBehaviour
         curButton.GetComponent<ThemeSelection>().menuSystem = gameObject;
         curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
         curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
+        curButton.GetComponent<ThemeSelection>().paidThemeButtons = paidThemeButtons;
         if (item.themeImage != null)
         {
             curButton.transform.Find("ThemeImage").GetComponent<Image>().sprite = item.themeImage;

@@ -14,6 +14,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     private string adType = "Rewarded_Android";
 
     public Button watchAdButton;
+    public Button[] paidThemeButtons;
     public Color colorSelected;
     public Color colorUnselected;
     public GameObject menuSystem;
@@ -59,7 +60,20 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
             }
             else if (theme.type == themeType.paid)
             {
-                if (menuSystem.GetComponent<IAP>().GetVIPStatus())
+                bool hasThis = false;
+                if (theme.name == "Alcohol" && menuSystem.GetComponent<IAP>().GetAlcStatus())
+                {
+                    hasThis = true;
+                }
+                else if (theme.name == "18" && menuSystem.GetComponent<IAP>().Get18Status())
+                {
+                    hasThis = true;
+                }
+                else if (theme.name == "Sharades" && menuSystem.GetComponent<IAP>().GetShaStatus())
+                {
+                    hasThis = true;
+                }
+                if (menuSystem.GetComponent<IAP>().GetVIPStatus() || hasThis)
                 {
                     menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
                     transform.Find("ThemeBackground").GetComponent<Image>().color = colorSelected;
@@ -70,6 +84,22 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 {
                     watchAdButton.gameObject.SetActive(false);
                     paidContent.SetActive(true);
+                    foreach (var item in paidThemeButtons)
+                    {
+                        item.gameObject.SetActive(false);
+                    }
+                    if (theme.name=="Alcohol")
+                    {
+                        paidThemeButtons[0].gameObject.SetActive(true);
+                    }
+                    else if (theme.name == "18")
+                    {
+                        paidThemeButtons[1].gameObject.SetActive(true);
+                    }
+                    else if (theme.name == "Sharades")
+                    {
+                        paidThemeButtons[2].gameObject.SetActive(true);
+                    }
                     menuSystem.GetComponent<MenuNavigation>().OpenMenu(7);
                     menuSystem.GetComponent<InitializeThemes>().curAdTheme = theme;
                     menuSystem.GetComponent<StartGame>().GetDescriptionThemes(theme.description);

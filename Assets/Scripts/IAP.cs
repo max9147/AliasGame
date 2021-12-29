@@ -8,9 +8,15 @@ public class IAP : MonoBehaviour, IStoreListener
 {
     private static IStoreController storeController;
     private static IExtensionProvider extensionProvider;
-    private static string payID = "VIP";
+    private static string VIPpayID = "VIP";
+    private static string AlcPayID = "ThemeAlc";
+    private static string PayID18 = "Theme18";
+    private static string ShaPayID = "ThemeSha";
 
     private bool isVIP = false;
+    private bool hasAlc = false;
+    private bool has18 = false;
+    private bool hasSha = false;
 
     private void Awake()
     {
@@ -21,6 +27,30 @@ public class IAP : MonoBehaviour, IStoreListener
         else
         {
             isVIP = false;
+        }
+        if (PlayerPrefs.HasKey("ThemeAlc"))
+        {
+            hasAlc = true;
+        }
+        else
+        {
+            hasAlc = false;
+        }
+        if (PlayerPrefs.HasKey("Theme18"))
+        {
+            has18 = true;
+        }
+        else
+        {
+            has18 = false;
+        }
+        if (PlayerPrefs.HasKey("ThemeSha"))
+        {
+            hasSha = true;
+        }
+        else
+        {
+            hasSha = false;
         }
     }
 
@@ -39,7 +69,7 @@ public class IAP : MonoBehaviour, IStoreListener
             return;
         }
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
-        builder.AddProduct(payID, ProductType.NonConsumable);
+        builder.AddProduct(VIPpayID, ProductType.NonConsumable);
         UnityPurchasing.Initialize(this, builder);
     }
 
@@ -47,8 +77,44 @@ public class IAP : MonoBehaviour, IStoreListener
     {
         if (storeController != null && extensionProvider != null)
         {
-            Product product = storeController.products.WithID(payID);
+            Product product = storeController.products.WithID(VIPpayID);
             if (product != null && product.availableToPurchase) 
+            {
+                storeController.InitiatePurchase(product);
+            }
+        }
+    }
+
+    public void BuyAlc()
+    {
+        if (storeController != null && extensionProvider != null)
+        {
+            Product product = storeController.products.WithID(AlcPayID);
+            if (product != null && product.availableToPurchase)
+            {
+                storeController.InitiatePurchase(product);
+            }
+        }
+    }
+
+    public void Buy18()
+    {
+        if (storeController != null && extensionProvider != null)
+        {
+            Product product = storeController.products.WithID(PayID18);
+            if (product != null && product.availableToPurchase)
+            {
+                storeController.InitiatePurchase(product);
+            }
+        }
+    }
+
+    public void BuySha()
+    {
+        if (storeController != null && extensionProvider != null)
+        {
+            Product product = storeController.products.WithID(ShaPayID);
+            if (product != null && product.availableToPurchase)
             {
                 storeController.InitiatePurchase(product);
             }
@@ -73,15 +139,45 @@ public class IAP : MonoBehaviour, IStoreListener
 
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs purchaseEvent)
     {
-        if (!PlayerPrefs.HasKey("VIP"))
+        if (String.Equals(purchaseEvent.purchasedProduct.definition.id, VIPpayID, StringComparison.Ordinal))
         {
-            PlayerPrefs.SetInt("VIP", 0);
-            isVIP = true;
-            foreach (var item in GetComponent<InitializeThemes>().VIPButtons)
+            if (!PlayerPrefs.HasKey("VIP"))
             {
-                Destroy(item);
+                PlayerPrefs.SetInt("VIP", 0);
+                isVIP = true;
+                foreach (var item in GetComponent<InitializeThemes>().VIPButtons)
+                {
+                    Destroy(item);
+                }
+                GetComponent<MenuNavigation>().CloseVIP();
             }
-            GetComponent<MenuNavigation>().CloseVIP();
+        }
+        else if (String.Equals(purchaseEvent.purchasedProduct.definition.id, AlcPayID, StringComparison.Ordinal))
+        {
+            if (!PlayerPrefs.HasKey("ThemeAlc"))
+            {
+                PlayerPrefs.SetInt("ThemeAlc", 0);
+                hasAlc = true;
+                GetComponent<MenuNavigation>().CloseDescription();
+            }
+        }
+        else if (String.Equals(purchaseEvent.purchasedProduct.definition.id, PayID18, StringComparison.Ordinal))
+        {
+            if (!PlayerPrefs.HasKey("Theme18"))
+            {
+                PlayerPrefs.SetInt("Theme18", 0);
+                has18 = true;
+                GetComponent<MenuNavigation>().CloseDescription();
+            }
+        }
+        else if (String.Equals(purchaseEvent.purchasedProduct.definition.id, ShaPayID, StringComparison.Ordinal))
+        {
+            if (!PlayerPrefs.HasKey("ThemeSha"))
+            {
+                PlayerPrefs.SetInt("ThemeSha", 0);
+                hasSha = true;
+                GetComponent<MenuNavigation>().CloseDescription();
+            }
         }
         return PurchaseProcessingResult.Complete;
     }
@@ -89,6 +185,21 @@ public class IAP : MonoBehaviour, IStoreListener
     public bool GetVIPStatus()
     {
         return isVIP;
+    }
+
+    public bool GetAlcStatus()
+    {
+        return hasAlc;
+    }
+
+    public bool Get18Status()
+    {
+        return has18;
+    }
+
+    public bool GetShaStatus()
+    {
+        return hasSha;
     }
 
     public void RemoveVIP()
