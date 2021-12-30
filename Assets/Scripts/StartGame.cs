@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -16,6 +17,11 @@ public class StartGame : MonoBehaviour
     public GameObject gameplay;
     public TextMeshProUGUI nameTheme;
     public TextMeshProUGUI descriptionTheme;
+
+    private void Start()
+    {
+        Input.gyro.enabled = true;
+    }
 
     public void LaunchGame(bool isTeamGame)
     {

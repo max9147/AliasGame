@@ -41,7 +41,9 @@ public class TimerControl : MonoBehaviour
             Destroy(child.gameObject);
         }
         correctContainer.GetComponent<RectTransform>().sizeDelta = new Vector3(500, GetComponent<GameControls>().correctWords.Count * 160 - 10);
+        correctContainer.transform.localPosition = new Vector3(0, (1500 - correctContainer.GetComponent<RectTransform>().sizeDelta.y) / 2);
         wrongContainer.GetComponent<RectTransform>().sizeDelta = new Vector3(500, GetComponent<GameControls>().wrongWords.Count * 160 - 10);
+        wrongContainer.transform.localPosition = new Vector3(0, (1500 - wrongContainer.GetComponent<RectTransform>().sizeDelta.y) / 2);
 
         foreach (var item in GetComponent<GameControls>().correctWords)
         {

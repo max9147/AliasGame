@@ -44,6 +44,7 @@ public class MenuNavigation : MonoBehaviour
 
     public void RestartRound()
     {
+        GetComponent<Gameplay>().ChangeWord();
         foreach (var item in menus)
         {
             item.SetActive(false);

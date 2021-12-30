@@ -28,6 +28,8 @@ public class Gameplay : MonoBehaviour
 
     public void StartGame(bool isTeamGame)
     {
+        availableWords.Clear();
+        availableWordsBackup.Clear();
         currentTeam = 0;
         if (isTeamGame)
         {
@@ -63,6 +65,7 @@ public class Gameplay : MonoBehaviour
             rotateShowing = false;
             rotateScreen.SetActive(false);
             GetComponent<PhoneTilt>().isPlaying = true;
+            GetComponent<PhoneTilt>().delayTime = -1.5f;
         }
     }
 
