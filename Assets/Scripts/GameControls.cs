@@ -26,6 +26,7 @@ public class GameControls : MonoBehaviour
 
     public void CorrectAnswer()
     {
+        GetComponent<SoundSystem>().PlayCorrectAnswer();
         correctWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
         gameplayBG.color = correctColor;
@@ -42,6 +43,7 @@ public class GameControls : MonoBehaviour
 
     public void WrongAnswer()
     {
+        GetComponent<SoundSystem>().PlayWrongAnswer();
         wrongWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
         gameplayBG.color = wrongColor;

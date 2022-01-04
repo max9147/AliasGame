@@ -75,6 +75,7 @@ public class Settings : MonoBehaviour
 
     public void ToggleVibrations()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         if (vibrationsOn)
         {
             vibrationsOn = false;
@@ -94,6 +95,7 @@ public class Settings : MonoBehaviour
 
     public void ToggleMusic()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         if (musicOn)
         {
             musicOn = false;
@@ -110,6 +112,7 @@ public class Settings : MonoBehaviour
 
     public void ToggleEffects()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         if (effectsOn)
         {
             effectsOn = false;

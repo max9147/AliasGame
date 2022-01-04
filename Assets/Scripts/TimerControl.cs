@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class TimerControl : MonoBehaviour
 {
     private bool isGoingGame = false;
+    private bool isTicking = false;
     private float timerLength;
     private GameObject curWord;
 
@@ -20,6 +21,7 @@ public class TimerControl : MonoBehaviour
     public void TimerCount()
     {
         timerLength = GetComponent<StartGame>().GetRoundLength();
+        isTicking = false;
     }
 
     public void StartTimer()
@@ -67,12 +69,19 @@ public class TimerControl : MonoBehaviour
             timerLength -= Time.deltaTime;
             textTimer.text = timerLength.ToString("F2");
 
+            if (timerLength <= 10 && !isTicking)
+            {
+                GetComponent<SoundSystem>().PlayTimeOut();
+                isTicking = true;
+            }
+
             if (timerLength <= 0)
             {
                 TotalScore();
-                isGoingGame = false;
+                isGoingGame = false;                
                 GetComponent<MenuNavigation>().OpenMenu(5);
                 GetComponent<PhoneTilt>().isPlaying = false;
+                GetComponent<SoundSystem>().PlayRoundEnd();
             }
         }
     }

@@ -29,6 +29,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
 
     public void SelectTheme()
     {
+        menuSystem.GetComponent<SoundSystem>().PlayButtonClick();
         if (!isSelected)
         {
             if (theme.type == themeType.free)

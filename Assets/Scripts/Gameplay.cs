@@ -59,7 +59,7 @@ public class Gameplay : MonoBehaviour
 
     private void Update()
     {
-        if (Input.gyro.attitude.x > 0.4f && rotateShowing)
+        if (Input.gyro.rotationRate.z > 2f && rotateShowing)
         {
             GetComponent<TimerControl>().StartTimer();
             rotateShowing = false;

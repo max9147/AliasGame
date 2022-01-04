@@ -8,6 +8,7 @@ public class MenuNavigation : MonoBehaviour
 
     public void OpenMenu(int menuID)
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         if (menuID != 7 && menuID != 9)
         {
             foreach (var item in menus)
@@ -34,16 +35,19 @@ public class MenuNavigation : MonoBehaviour
 
     public void CloseDescription()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         menus[7].SetActive(false);
     }
 
     public void CloseVIP()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         menus[9].SetActive(false);
     }
 
     public void RestartRound()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         GetComponent<Gameplay>().ChangeWord();
         foreach (var item in menus)
         {
@@ -61,6 +65,7 @@ public class MenuNavigation : MonoBehaviour
 
     public void ReturnToMain()
     {
+        GetComponent<SoundSystem>().PlayButtonClick();
         foreach (var item in menus)
         {
             item.SetActive(false);
