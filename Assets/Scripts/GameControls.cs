@@ -11,9 +11,7 @@ public class GameControls : MonoBehaviour
     public Color wrongColor;
     public Image gameplayBG;
     public List<string> correctWords;
-    public List<string> wrongWords;  
-    
-
+    public List<string> wrongWords;
 
     private void FixedUpdate()
     {
