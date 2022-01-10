@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Countries
   m_EditorClassIdentifier: 
   themeName: "\u0421\u0442\u0440\u0430\u043D\u044B"
-  themeImage: {fileID: 0}
+  themeImage: {fileID: 21300000, guid: 52bbb6da42336034d835ead2fff12434, type: 3}
   description: 
   type: 0
   words:

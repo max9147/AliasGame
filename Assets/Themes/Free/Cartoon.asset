@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cartoon
   m_EditorClassIdentifier: 
   themeName: "\u041C\u0443\u043B\u044C\u0442\u0444\u0438\u043B\u044C\u043C\u044B"
-  themeImage: {fileID: 0}
+  themeImage: {fileID: 21300000, guid: 006339d510a95da4da2f0d6288988812, type: 3}
   description: 
   type: 0
   words:
