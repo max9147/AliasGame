@@ -117,10 +117,8 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     {
         if (isSelected)
         {
-            menuSystem.GetComponent<StartGame>().RemoveSelectedTheme(theme);
             transform.Find("ThemeBackground").GetComponent<Image>().color = colorUnselected;
             isSelected = false;
-            menuSystem.GetComponent<StartGame>().ResetSelectedCount();
         }
     }
 

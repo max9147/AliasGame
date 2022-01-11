@@ -10,8 +10,8 @@ public class StartGame : MonoBehaviour
 {
     private int roundLength;
     private int selectedCount = 0;
-    private List<Themes> selectedThemes = new List<Themes>();
 
+    public List<Themes> selectedThemes = new List<Themes>();
     public Button startDuelButton;
     public Button startTeamButton;
     public GameObject gameplay;
@@ -57,6 +57,7 @@ public class StartGame : MonoBehaviour
         selectedCount = 0;
         startDuelButton.interactable = false;
         startTeamButton.interactable = false;
+        selectedThemes.Clear();
     }
 
     public void AddSelectedTheme(Themes theme)

@@ -25,6 +25,7 @@ public class MenuNavigation : MonoBehaviour
             {
                 item.GetComponent<ThemeSelection>().DisselectThemes();
             }
+            GetComponent<StartGame>().ResetSelectedCount();
         }
 
         if (menuID == 2)
