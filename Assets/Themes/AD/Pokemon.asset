@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pokemon
   m_EditorClassIdentifier: 
   themeName: "\u041F\u043E\u043A\u0435\u043C\u043E\u043D\u044B"
-  themeImage: {fileID: 0}
+  themeImage: {fileID: 21300000, guid: 5b30764d6308f9a4a8684af915c0e6f2, type: 3}
   description: "\u0412\u0441\u0435 \u0432\u0438\u0434\u044B \u043F\u043E\u043A\u0435\u043C\u043E\u043D\u043E\u0432
     \u0432\u043C\u0435\u0441\u0442\u0435 \u0441 \u044D\u0432\u043E\u043B\u044E\u0446\u0438\u0435\u0439"
   type: 1

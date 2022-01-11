@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MobileGames
   m_EditorClassIdentifier: 
   themeName: "\u041C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0435 \u0438\u0433\u0440\u044B"
-  themeImage: {fileID: 0}
+  themeImage: {fileID: 21300000, guid: 1b85d2467c5e34c4881c71fae9a7fea9, type: 3}
   description: "\u041D\u0430\u0437\u0432\u0430\u043D\u0438\u044F \u043F\u043E\u043F\u0443\u043B\u044F\u0440\u043D\u044B\u0445
     \u043C\u043E\u0431\u0438\u043B\u044C\u043D\u044B\u0445 \u0438\u0433\u0440"
   type: 1
