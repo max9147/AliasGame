@@ -7,9 +7,10 @@ public class GameControls : MonoBehaviour
 {
     private float colorTime = 0;
 
-    public Color correctColor;
-    public Color wrongColor;
+    public Color transparentColor;
     public Image gameplayBG;
+    public GameObject correctBG;
+    public GameObject wrongBG;
     public List<string> correctWords;
     public List<string> wrongWords;
 
@@ -18,7 +19,7 @@ public class GameControls : MonoBehaviour
         if (colorTime > 0)
         {
             colorTime -= Time.deltaTime;
-            gameplayBG.color = Color.Lerp(gameplayBG.color, Color.white, 0.1f);
+            gameplayBG.color = Color.Lerp(gameplayBG.color, Color.white, 0.055f);
         }
     }
 
@@ -27,7 +28,9 @@ public class GameControls : MonoBehaviour
         GetComponent<SoundSystem>().PlayCorrectAnswer();
         correctWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
-        gameplayBG.color = correctColor;
+        wrongBG.SetActive(false);
+        correctBG.SetActive(true);
+        gameplayBG.color = transparentColor;
         colorTime = 1.5f;
         if (GetComponent<Settings>().GetVibrations())
         {
@@ -44,7 +47,9 @@ public class GameControls : MonoBehaviour
         GetComponent<SoundSystem>().PlayWrongAnswer();
         wrongWords.Add(GetComponent<Gameplay>().GetWord());
         GetComponent<Gameplay>().ChangeWord();
-        gameplayBG.color = wrongColor;
+        correctBG.SetActive(false);
+        wrongBG.SetActive(true);
+        gameplayBG.color = transparentColor;
         colorTime = 1.5f;
         if (GetComponent<Settings>().GetVibrations())
         {

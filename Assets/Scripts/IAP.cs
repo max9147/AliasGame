@@ -11,12 +11,10 @@ public class IAP : MonoBehaviour, IStoreListener
     private static string VIPpayID = "VIP";
     private static string AlcPayID = "ThemeAlc";
     private static string PayID18 = "Theme18";
-    private static string ShaPayID = "ThemeSha";
 
     private bool isVIP = false;
     private bool hasAlc = false;
     private bool has18 = false;
-    private bool hasSha = false;
 
     private void Awake()
     {
@@ -43,14 +41,6 @@ public class IAP : MonoBehaviour, IStoreListener
         else
         {
             has18 = false;
-        }
-        if (PlayerPrefs.HasKey("ThemeSha"))
-        {
-            hasSha = true;
-        }
-        else
-        {
-            hasSha = false;
         }
     }
 
@@ -109,18 +99,6 @@ public class IAP : MonoBehaviour, IStoreListener
         }
     }
 
-    public void BuySha()
-    {
-        if (storeController != null && extensionProvider != null)
-        {
-            Product product = storeController.products.WithID(ShaPayID);
-            if (product != null && product.availableToPurchase)
-            {
-                storeController.InitiatePurchase(product);
-            }
-        }
-    }
-
     public void OnInitialized(IStoreController controller, IExtensionProvider extensions)
     {
         storeController = controller;
@@ -170,15 +148,6 @@ public class IAP : MonoBehaviour, IStoreListener
                 GetComponent<MenuNavigation>().CloseDescription();
             }
         }
-        else if (String.Equals(purchaseEvent.purchasedProduct.definition.id, ShaPayID, StringComparison.Ordinal))
-        {
-            if (!PlayerPrefs.HasKey("ThemeSha"))
-            {
-                PlayerPrefs.SetInt("ThemeSha", 0);
-                hasSha = true;
-                GetComponent<MenuNavigation>().CloseDescription();
-            }
-        }
         return PurchaseProcessingResult.Complete;
     }
 
@@ -195,11 +164,6 @@ public class IAP : MonoBehaviour, IStoreListener
     public bool Get18Status()
     {
         return has18;
-    }
-
-    public bool GetShaStatus()
-    {
-        return hasSha;
     }
 
     public void RemoveVIP()

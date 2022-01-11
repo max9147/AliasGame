@@ -70,10 +70,6 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                 {
                     hasThis = true;
                 }
-                else if (theme.name == "Sharades" && menuSystem.GetComponent<IAP>().GetShaStatus())
-                {
-                    hasThis = true;
-                }
                 if (menuSystem.GetComponent<IAP>().GetVIPStatus() || hasThis)
                 {
                     menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
