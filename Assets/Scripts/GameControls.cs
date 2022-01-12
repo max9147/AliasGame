@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class GameControls : MonoBehaviour
 {
-    private float colorTime = 0;
-
     public Color transparentColor;
     public Image gameplayBG;
     public GameObject correctBG;
@@ -16,10 +14,9 @@ public class GameControls : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (colorTime > 0)
+        if (gameplayBG.color!=Color.white)
         {
-            colorTime -= Time.deltaTime;
-            gameplayBG.color = Color.Lerp(gameplayBG.color, Color.white, 0.055f);
+            gameplayBG.color = Color.Lerp(gameplayBG.color, Color.white, 0.03f);
         }
     }
 
@@ -31,7 +28,6 @@ public class GameControls : MonoBehaviour
         wrongBG.SetActive(false);
         correctBG.SetActive(true);
         gameplayBG.color = transparentColor;
-        colorTime = 1.5f;
         if (GetComponent<Settings>().GetVibrations())
         {
             Handheld.Vibrate();
@@ -50,7 +46,6 @@ public class GameControls : MonoBehaviour
         correctBG.SetActive(false);
         wrongBG.SetActive(true);
         gameplayBG.color = transparentColor;
-        colorTime = 1.5f;
         if (GetComponent<Settings>().GetVibrations())
         {
             Handheld.Vibrate();
