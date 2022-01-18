@@ -6,13 +6,11 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    public Toggle musicToggle;
     public Toggle effectsToggle;
     public Toggle vibrationsToggle;
     public Slider sensitivitySlider;
     public AudioMixer audioMixer;
 
-    private bool musicOn = true;
     private bool effectsOn = true;
     private bool vibrationsOn = true;
 
@@ -41,21 +39,6 @@ public class Settings : MonoBehaviour
             sensitivitySlider.value = PlayerPrefs.GetFloat("Sensitivity");
             GetComponent<PhoneTilt>().ChangeSensitivity();
         }
-
-        if (!PlayerPrefs.HasKey("Music"))
-        {
-            PlayerPrefs.SetInt("Music", 1);
-        }
-        else
-        {
-            if (PlayerPrefs.GetInt("Music") == 0)
-            {
-                musicOn = false;
-                musicToggle.isOn = false;
-                audioMixer.SetFloat("MusicVol", -80);                
-            }
-        }
-        musicToggle.onValueChanged.AddListener(delegate { ToggleMusic(); });
 
         if (!PlayerPrefs.HasKey("Effects"))
         {
@@ -91,23 +74,6 @@ public class Settings : MonoBehaviour
     public bool GetVibrations()
     {
         return vibrationsOn;
-    }
-
-    public void ToggleMusic()
-    {
-        GetComponent<SoundSystem>().PlayButtonClick();
-        if (musicOn)
-        {
-            musicOn = false;
-            audioMixer.SetFloat("MusicVol", -80);
-            PlayerPrefs.SetInt("Music", 0);
-        }
-        else
-        {
-            musicOn = true;
-            audioMixer.SetFloat("MusicVol", 0);
-            PlayerPrefs.SetInt("Music", 1);
-        }
     }
 
     public void ToggleEffects()

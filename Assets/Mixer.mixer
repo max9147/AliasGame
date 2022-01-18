@@ -14,25 +14,6 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
---- !u!243 &-6238597694122663222
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Music
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: a8d73be5d41bd6e498137442b06382f8
-  m_Children: []
-  m_Volume: d61061e420bf7094488627474916b06a
-  m_Pitch: 52f24e0cb45df4c45aab7814a8eba1d4
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: 358084796070572712}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -51,12 +32,9 @@ AudioMixerController:
   m_ExposedParameters:
   - guid: 599d0ad96e13dba4cb7a4af06b44bed9
     name: EffectsVol
-  - guid: d61061e420bf7094488627474916b06a
-    name: MusicVol
   m_AudioMixerGroupViews:
   - guids:
     - 71572ca7ec0043643bd879186ca4a854
-    - a8d73be5d41bd6e498137442b06382f8
     - 48512c2ede4154140bb1397246a1deab
     name: View
   m_CurrentViewIndex: 0
@@ -71,7 +49,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 71572ca7ec0043643bd879186ca4a854
   m_Children:
-  - {fileID: -6238597694122663222}
   - {fileID: 559748447037292022}
   m_Volume: ebd418b0b5519554fa5f670a8bba7d11
   m_Pitch: 80bf4703a94a0a4488c2782d630028ca
@@ -107,20 +84,6 @@ AudioMixerSnapshotController:
   m_SnapshotID: 0ee6aca694e6d4143a839f66c97417de
   m_FloatValues: {}
   m_TransitionOverrides: {}
---- !u!244 &358084796070572712
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: b7ff5c0b8c24e6b4d84fd2d12dafb850
-  m_EffectName: Attenuation
-  m_MixLevel: 961339cb841be154291a71f0cc9e8d41
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
 --- !u!243 &559748447037292022
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
