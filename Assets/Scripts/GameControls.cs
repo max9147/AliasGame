@@ -16,7 +16,7 @@ public class GameControls : MonoBehaviour
     {
         if (gameplayBG.color!=Color.white)
         {
-            gameplayBG.color = Color.Lerp(gameplayBG.color, Color.white, 0.03f);
+            gameplayBG.color = Color.Lerp(gameplayBG.color, Color.white, 0.06f);
         }
     }
 

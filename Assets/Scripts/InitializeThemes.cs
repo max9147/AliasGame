@@ -46,8 +46,10 @@ public class InitializeThemes : MonoBehaviour
         {
             curButton = Instantiate(themeButtonPrefab, adContainerDuel.transform);
             SetupTheme(item);
+            curButton.GetComponent<ThemeSelection>().gamemode = "Duel";
             curButton = Instantiate(themeButtonPrefab, adContainerTeam.transform);
             SetupTheme(item);
+            curButton.GetComponent<ThemeSelection>().gamemode = "Team";
         }
         adContainerDuel.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
         adContainerTeam.GetComponent<RectTransform>().sizeDelta = new Vector3(100, Mathf.Ceil(adThemes.Length / 4f) * 245);
@@ -87,6 +89,8 @@ public class InitializeThemes : MonoBehaviour
         curButton.GetComponent<ThemeSelection>().watchAdButton = watchAdButton;
         curButton.GetComponent<ThemeSelection>().paidContent = paidContent;
         curButton.GetComponent<ThemeSelection>().paidThemeButtons = paidThemeButtons;
+        curButton.GetComponent<ThemeSelection>().duelMenu = adContainerDuel;
+        curButton.GetComponent<ThemeSelection>().teamMenu = adContainerTeam;
         if (item.themeImage != null)
         {
             curButton.transform.Find("ThemeImage").GetComponent<Image>().sprite = item.themeImage;

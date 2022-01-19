@@ -19,7 +19,10 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     public Color colorUnselected;
     public GameObject menuSystem;
     public GameObject paidContent;
+    public GameObject duelMenu;
+    public GameObject teamMenu;
     public Themes theme;
+    public string gamemode;
 
     private void Start()
     {
@@ -149,6 +152,10 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     {
         if (theme == menuSystem.GetComponent<InitializeThemes>().curAdTheme)
         {
+            if ((teamMenu.activeInHierarchy && gamemode!="Team") || (duelMenu.activeInHierarchy && gamemode != "Duel"))
+            {
+                return;
+            }
             if (showResult == ShowResult.Finished)
             {
                 menuSystem.GetComponent<StartGame>().AddSelectedTheme(theme);
