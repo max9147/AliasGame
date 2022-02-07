@@ -11,6 +11,7 @@ public class Gameplay : MonoBehaviour
     public GameObject teamScorePrefab;
     public GameObject scoringContainer;
     public GameObject rotateScreen;
+    public GameObject teamNameBG;
     public List<string> availableWords;
     public List<string> availableWordsBackup;
     public List<Themes> availableThemes;    
@@ -36,12 +37,14 @@ public class Gameplay : MonoBehaviour
             TeamSetUp();
             SetCurrentTeam();
             teamGameSelected = true;
+            teamNameBG.SetActive(true);
         }
         else
         {
             teamGameSelected = false;
             rotateScreen.SetActive(true);
             rotateScreenTeamName.text = "";
+            teamNameBG.SetActive(false);
         }
 
         availableThemes = GetComponent<StartGame>().GetSelectedThemes();
@@ -114,7 +117,7 @@ public class Gameplay : MonoBehaviour
             nameTeamText.text = teamNames[currentTeam];
             currentTeam++;
             rotateScreen.SetActive(true);
-            rotateScreenTeamName.text = "Сейчас играет комманда: " + teamNames[currentTeam - 1];
+            rotateScreenTeamName.text = "Сейчас играет команда: " + teamNames[currentTeam - 1];
         }
         else
         {
