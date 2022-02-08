@@ -96,10 +96,6 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
                     {
                         paidThemeButtons[1].gameObject.SetActive(true);
                     }
-                    else if (theme.name == "Sharades")
-                    {
-                        paidThemeButtons[2].gameObject.SetActive(true);
-                    }
                     menuSystem.GetComponent<MenuNavigation>().OpenMenu(7);
                     menuSystem.GetComponent<InitializeThemes>().curAdTheme = theme;
                     menuSystem.GetComponent<StartGame>().GetDescriptionThemes(theme.description);

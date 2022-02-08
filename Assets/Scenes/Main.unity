@@ -5341,7 +5341,6 @@ MonoBehaviour:
   paidThemeButtons:
   - {fileID: 1996483932}
   - {fileID: 1695764210}
-  - {fileID: 0}
   VIPButtonPrefab: {fileID: 3583421473977427753, guid: ccd19eaad6726b74b91c679d969649a1, type: 3}
   themeButtonPrefab: {fileID: 8223799800527255840, guid: 6835d3169c427704e9cb766b78b87d5d, type: 3}
   rectDuel: {fileID: 1806412767}
