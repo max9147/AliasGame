@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ThemeSelection : MonoBehaviour, IUnityAdsListener
 {
     private bool isSelected = false;
-    private bool adTestMode = true;
+    private bool adTestMode = false;
     private bool adSkip = false;
     private string gameID = "4497109";
     private string adType = "Rewarded_Android";
@@ -33,6 +33,7 @@ public class ThemeSelection : MonoBehaviour, IUnityAdsListener
     public void SelectTheme()
     {
         menuSystem.GetComponent<SoundSystem>().PlayButtonClick();
+        menuSystem.GetComponent<MenuNavigation>().CloseVIP();
         if (!isSelected)
         {
             if (theme.type == themeType.free)

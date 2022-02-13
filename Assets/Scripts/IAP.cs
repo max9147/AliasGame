@@ -8,9 +8,9 @@ public class IAP : MonoBehaviour, IStoreListener
 {
     private static IStoreController storeController;
     private static IExtensionProvider extensionProvider;
-    private static string VIPpayID = "VIP";
-    private static string AlcPayID = "ThemeAlc";
-    private static string PayID18 = "Theme18";
+    private static string VIPpayID = "vip";
+    private static string AlcPayID = "theme_alc";
+    private static string PayID18 = "theme_18";
 
     private bool isVIP = false;
     private bool hasAlc = false;
@@ -60,6 +60,8 @@ public class IAP : MonoBehaviour, IStoreListener
         }
         var builder = ConfigurationBuilder.Instance(StandardPurchasingModule.Instance());
         builder.AddProduct(VIPpayID, ProductType.NonConsumable);
+        builder.AddProduct(AlcPayID, ProductType.NonConsumable);
+        builder.AddProduct(PayID18, ProductType.NonConsumable);
         UnityPurchasing.Initialize(this, builder);
     }
 
@@ -164,11 +166,5 @@ public class IAP : MonoBehaviour, IStoreListener
     public bool Get18Status()
     {
         return has18;
-    }
-
-    public void RemoveVIP()
-    {
-        isVIP = false;
-        PlayerPrefs.DeleteAll();
     }
 }
