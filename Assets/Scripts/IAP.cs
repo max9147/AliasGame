@@ -62,7 +62,7 @@ public class IAP : MonoBehaviour, IStoreListener
         builder.AddProduct(VIPpayID, ProductType.NonConsumable);
         builder.AddProduct(AlcPayID, ProductType.NonConsumable);
         builder.AddProduct(PayID18, ProductType.NonConsumable);
-        UnityPurchasing.Initialize(this, builder);
+        UnityPurchasing.Initialize(this, builder);        
     }
 
     public void BuyVIP()
